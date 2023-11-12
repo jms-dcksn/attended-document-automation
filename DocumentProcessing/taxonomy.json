@@ -1,0 +1,925 @@
+﻿{
+  "DataContractVersion": "1.1",
+  "DocumentTypes": [
+    {
+      "Connections": [],
+      "DocumentTypeId": "Semi-StructuredDocuments.NoCategory.Receipts",
+      "Group": "Semi-Structured Documents",
+      "Category": "",
+      "Name": "Receipts",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.name",
+          "FieldName": "name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.vendor-addr",
+          "FieldName": "vendor-addr",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.total",
+          "FieldName": "total",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.date",
+          "FieldName": "date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.phone",
+          "FieldName": "phone",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d2d550"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.currency",
+          "FieldName": "currency",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5cd483"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.expense-type",
+          "FieldName": "expense-type",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f32eff"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "x"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.items",
+          "FieldName": "items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.items.description",
+              "FieldName": "description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.items.line-amount",
+              "FieldName": "line-amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.items.unit-price",
+              "FieldName": "unit-price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Receipts.items.quantity",
+              "FieldName": "quantity",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            }
+          ],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#84bfe3"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        }
+      ]
+    },
+    {
+      "Connections": [],
+      "DocumentTypeId": "Semi-StructuredDocuments.NoCategory.Invoices",
+      "Group": "Semi-Structured Documents",
+      "Category": "",
+      "Name": "Invoices",
+      "OptionalUniqueIdentifier": "",
+      "TypeField": {
+        "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.DocumentType",
+        "FieldName": "Document Type"
+      },
+      "Fields": [
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.name",
+          "FieldName": "name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#038a18"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.vendor-addr",
+          "FieldName": "vendor-addr",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fa6616"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.billing-name",
+          "FieldName": "billing-name",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#8a97a0"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "l"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.billing-address",
+          "FieldName": "billing-address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#6eb84a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.shipping-address",
+          "FieldName": "shipping-address",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#cac342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.invoice-no",
+          "FieldName": "invoice-no",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#f3c342"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "c"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.po-no",
+          "FieldName": "po-no",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#3ddb77"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.vendor-vat-no",
+          "FieldName": "vendor-vat-no",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a7ac22"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.date",
+          "FieldName": "date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#4e696e"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.tax",
+          "FieldName": "tax",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#91bd91"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "x"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.total",
+          "FieldName": "total",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#7073c1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": {
+            "Criticality": "Should",
+            "Rules": [
+              {
+                "Name": "Invoice has total value",
+                "Type": "Mandatory",
+                "LogicalOperator": "OR",
+                "ComparisonOperator": "Equals",
+                "Expression": "",
+                "SetValues": []
+              },
+              {
+                "Name": "Total = Subtotal + Tax",
+                "Type": "Expression",
+                "LogicalOperator": "OR",
+                "ComparisonOperator": "Equals",
+                "Expression": "Semi-StructuredDocuments.NoCategory.Invoices.tax + Semi-StructuredDocuments.NoCategory.Invoices.net-amount",
+                "SetValues": []
+              }
+            ]
+          },
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.payment-terms",
+          "FieldName": "payment-terms",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#84bdb2"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.net-amount",
+          "FieldName": "net-amount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a286c5"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.due-date",
+          "FieldName": "due-date",
+          "IsMultiValue": false,
+          "Type": "Date",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c35caf"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "j"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.discount",
+          "FieldName": "discount",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9100e1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "k"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.shipping-charges",
+          "FieldName": "shipping-charges",
+          "IsMultiValue": false,
+          "Type": "Number",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ce5ac7"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "z"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.payment-addr",
+          "FieldName": "payment-addr",
+          "IsMultiValue": false,
+          "Type": "Address",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#a983e1"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "1"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.description",
+          "FieldName": "description",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c25dd9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "2"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items",
+          "FieldName": "items",
+          "IsMultiValue": false,
+          "Type": "Table",
+          "DeriveFieldsFormat": "",
+          "Components": [
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.description",
+              "FieldName": "description",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.quantity",
+              "FieldName": "quantity",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.unit-price",
+              "FieldName": "unit-price",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.line-amount",
+              "FieldName": "line-amount",
+              "IsMultiValue": false,
+              "Type": "Number",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.item-po-no",
+              "FieldName": "item-po-no",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.line-no",
+              "FieldName": "line-no",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.part-no",
+              "FieldName": "part-no",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            },
+            {
+              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.billing-vat-no",
+              "FieldName": "billing-vat-no",
+              "IsMultiValue": false,
+              "Type": "Text",
+              "DeriveFieldsFormat": "",
+              "Components": [],
+              "SetValues": [],
+              "Metadata": [],
+              "RuleSet": null,
+              "DefaultValue": "",
+              "DataSource": null
+            }
+          ],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#2e67ff"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "3"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        }
+      ]
+    }
+  ],
+  "Groups": [
+    {
+      "Name": "Semi-Structured Documents",
+      "Categories": []
+    }
+  ],
+  "SupportedLanguages": [
+    {
+      "Name": "Undetermined Language",
+      "Code": "und"
+    },
+    {
+      "Name": "Bulgarian",
+      "Code": "bul"
+    },
+    {
+      "Name": "Cantonese",
+      "Code": "yue"
+    },
+    {
+      "Name": "Danish",
+      "Code": "dan"
+    },
+    {
+      "Name": "Dutch",
+      "Code": "nld"
+    },
+    {
+      "Name": "English",
+      "Code": "eng"
+    },
+    {
+      "Name": "French",
+      "Code": "fra"
+    },
+    {
+      "Name": "Georgian",
+      "Code": "kat"
+    },
+    {
+      "Name": "German",
+      "Code": "deu"
+    },
+    {
+      "Name": "Greek",
+      "Code": "ell"
+    },
+    {
+      "Name": "Hebrew",
+      "Code": "heb"
+    },
+    {
+      "Name": "Hindi",
+      "Code": "hin"
+    },
+    {
+      "Name": "Italian",
+      "Code": "ita"
+    },
+    {
+      "Name": "Japanese",
+      "Code": "jpn"
+    },
+    {
+      "Name": "Korean",
+      "Code": "kor"
+    },
+    {
+      "Name": "Macedonian",
+      "Code": "mkd"
+    },
+    {
+      "Name": "Mandarin",
+      "Code": "zho"
+    },
+    {
+      "Name": "Marathi",
+      "Code": "mar"
+    },
+    {
+      "Name": "Norwegian",
+      "Code": "nor"
+    },
+    {
+      "Name": "Polish",
+      "Code": "pol"
+    },
+    {
+      "Name": "Portuguese",
+      "Code": "por"
+    },
+    {
+      "Name": "Romanian",
+      "Code": "ron"
+    },
+    {
+      "Name": "Russian",
+      "Code": "rus"
+    },
+    {
+      "Name": "Serbian",
+      "Code": "srp"
+    },
+    {
+      "Name": "Spanish",
+      "Code": "spa"
+    },
+    {
+      "Name": "Swedish",
+      "Code": "swe"
+    },
+    {
+      "Name": "Telugu",
+      "Code": "tel"
+    },
+    {
+      "Name": "Turkish",
+      "Code": "tur"
+    }
+  ]
+}

@@ -730,58 +730,6 @@
               "RuleSet": null,
               "DefaultValue": "",
               "DataSource": null
-            },
-            {
-              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.item-po-no",
-              "FieldName": "item-po-no",
-              "IsMultiValue": false,
-              "Type": "Text",
-              "DeriveFieldsFormat": "",
-              "Components": [],
-              "SetValues": [],
-              "Metadata": [],
-              "RuleSet": null,
-              "DefaultValue": "",
-              "DataSource": null
-            },
-            {
-              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.line-no",
-              "FieldName": "line-no",
-              "IsMultiValue": false,
-              "Type": "Text",
-              "DeriveFieldsFormat": "",
-              "Components": [],
-              "SetValues": [],
-              "Metadata": [],
-              "RuleSet": null,
-              "DefaultValue": "",
-              "DataSource": null
-            },
-            {
-              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.part-no",
-              "FieldName": "part-no",
-              "IsMultiValue": false,
-              "Type": "Text",
-              "DeriveFieldsFormat": "",
-              "Components": [],
-              "SetValues": [],
-              "Metadata": [],
-              "RuleSet": null,
-              "DefaultValue": "",
-              "DataSource": null
-            },
-            {
-              "FieldId": "Semi-StructuredDocuments.NoCategory.Invoices.items.billing-vat-no",
-              "FieldName": "billing-vat-no",
-              "IsMultiValue": false,
-              "Type": "Text",
-              "DeriveFieldsFormat": "",
-              "Components": [],
-              "SetValues": [],
-              "Metadata": [],
-              "RuleSet": null,
-              "DefaultValue": "",
-              "DataSource": null
             }
           ],
           "SetValues": [],

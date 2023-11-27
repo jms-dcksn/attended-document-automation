@@ -4,6 +4,7 @@
   "description": "Event-based trigger for inbound emails to capture attached receipts and invoices, process accordingly",
   "main": "Main.xaml",
   "dependencies": {
+    "ChromeERP.Descriptors": "[1.0.1]",
     "UiPath.DocumentUnderstanding.Activities": "[2.4.1]",
     "UiPath.DocumentUnderstanding.ML.Activities": "[1.24.0]",
     "UiPath.DocumentUnderstanding.OCR.LocalServer": "[1.5.1]",

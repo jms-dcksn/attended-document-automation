@@ -1,0 +1,287 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="ERP_Data_Entry" this:ERP_Data_Entry.in_FilePath="Output\Results_0_1-2.xlsx" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1507,4066</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ERP_Data_Entry_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities.Business</x:String>
+      <x:String>UiPath.Excel.Model</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="ERP_Data_Entry" sap:VirtualizedContainerService.HintSize="730,4001" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="2" Name="RowInt" />
+      <Variable x:TypeArguments="sd:DataTable" Name="InvoiceHeaders" />
+      <Variable x:TypeArguments="sd:DataTable" Name="InvoiceLines" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[InvoiceHeaders]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="668,88" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Simple Fields" WorkbookPath="[in_FilePath]" />
+    <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[InvoiceLines]" DisplayName="Read Range Workbook" sap:VirtualizedContainerService.HintSize="668,88" sap2010:WorkflowViewState.IdRef="ReadRange_2" SheetName="items" WorkbookPath="[in_FilePath]" />
+    <uix:NApplicationCard DisplayName="Chrome NewInvoice.html" sap:VirtualizedContainerService.HintSize="668,3634" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" ScopeGuid="e8508300-f484-4392-bc85-a5ab4e9387da">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="634,3417" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Enter Header Info" sap:VirtualizedContainerService.HintSize="572,1365" sap2010:WorkflowViewState.IdRef="Sequence_6">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Invoice No'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Text="[InvoiceHeaders.Rows(0).Item(&quot;invoice-no&quot;).ToString]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="Uk6n7WtjukeX88adva4JFQ" CvElementArea="263, 372, 351, 23" CvType="InputBox" DesignTimeRectangle="264, 373, 351, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Invoice No'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='InvoiceNo' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl id='InvoiceNo' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="26222f00-1549-437e-bd8f-15ac8122a539" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWMAAAAZCAYAAADkDE/yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dQhDoAwAARBXt3vl2BIEMU1XTGTnDu91wTgODEGCPjEeIxhZmYbt/LG+O8EwF5iDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFvjB9PkM3MbN9WPjEG4AwxBjhuzhv5HbOjI8wfFQAAAABJRU5ErkJggg==" InformativeScreenshot="ff6638929be60971800eac56240dc79c.png" IsResponsive="True" Reference="MkjTN-WGhEuqQ5s2r0yMnA/EdSsRKKQ90ysUL7ZaBHEQA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="26, 375, 81, 15" CvTextArgument="Invoice No:" CvType="Text" DesignTimeRectangle="24, 370, 235, 27" ElementType="Text" FriendlyName="'Invoice No'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Invoice No:' check:innerText='Invoice No:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAAfCAYAAAAP4pqgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJCSURBVHhe7ZfbbeswDEA9o4EuFHiVZBR3kH5kDF1VJl2JergB4jTEPQfQh0VLpAMdM54CALgEeQGcgrwATkFeAKcgL4BTkBfAKcgL4BTkBXAK8gI4pSvv/TaH6eMa7nL9Kl6S93MJ0zSF+dbKcg/XjylMl1WuAd6Tt5P3JYi80zSH65fM7SAv+OA/lzeO6hmRF3zwe3nTgV/Cmh/8OJbPPN7oZLpOLsPXNczZeitP66WxXrL749hzCmW81U0NWutte5Zyv7a84xrWsFRzAOfyoLzx4GZz24FWMbcDbL8j0z0qguzxc4+Iku1Z5q3jKr+KUtYQkRxDkVTeKHm1XnPu8sr1ozkATuZBeU1Xa4mUrxGht3i7o9k9irwpNuikZq1S12HIn0X2qGQtXjh1DYc5AE7m8b/Ncpmw8piDnvY46MxWljxvub6mG2/VmtOss/2SGecYvFgATua58sboj6C20/a+Cw/kHXQ3la49fi/vXkNa06+nAHnhj3myvNnfyaHYOZssOl/JO5DwKN6lJZ7UO9/WWt5WjtbvAfBCni6virFc7KG3nVgwexR5W5LldOJV7ZbRulhLGlpn516+eeGveb688Y7vDlsIoKQ98u4rQmd5yrx13HbwJFFeV7MmQ0fIPV9Ru85lOeQ5hjkATuYEeVWozuGWNUmQ72EEb3VN3U+H/ett44dSdeWNiJi2rjKHXdv7ngc4j668APDeIC+AU5AXwCnIC+AU5AVwCvICOAV5AZyCvABOQV4ApyAvgEtC+AfOp8inAfurvwAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Invoice Date'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_2" Text="[InvoiceHeaders.Rows(0).Item(&quot;date&quot;).ToString]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="rOhkKyF0cEih00U6ikA_Sw" CvElementArea="262, 401, 352, 23" CvType="InputBox" DesignTimeRectangle="264, 402, 351, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT InvoiceDate'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='InvoiceDate' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl id='InvoiceDate' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="dea6c767-8c18-4a32-8e98-78a59b60baf5" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWMAAAAZCAYAAADkDE/yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dQhDoAwAARBXt3vl2BIEMU1XTGTnDu91wTgODEGCPjEeIxhZmYbt/LG+O8EwF5iDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFvjB9PkM3MbN9WPjEG4AwxBjhuzhv5HbOjI8wfFQAAAABJRU5ErkJggg==" InformativeScreenshot="15455f2e24c527028a9c1b130ee660b0.png" IsResponsive="True" Reference="vCG0NV4g2EekjT7-dvx6LQ/aLFSl1YJZkCji_VIoVkFAA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="26, 404, 94, 15" CvTextArgument="Invoice Date:" CvType="Text" DesignTimeRectangle="24, 399, 235, 27" ElementType="Text" FriendlyName="'Invoice Date'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Invoice Date:' check:innerText='Invoice Date:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAAfCAYAAAAP4pqgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJ/SURBVHhe7ZZRjusgDAB7xkp7oSpX6R6le5D96DF4hJjUOIY02bS7PM1IfDQOxqk8wCkAQJcgL0CnIC9ApyAvQKcgL0CnIC9ApyAvQKcgL0CnIC9Ap1TlvX+ew+njGu7y+128Zd2vIZxOJ3cMX/LORsa6984F2MOfk/ctJHnP4fotvzPf13COAp8/N361zENeeCfIa2nFaiAv/ALPy5uaegg3c+WcG7bW9Hme/MyNPucwG4S3adwu6v04rCRl/AnxmoLew/Uj5rnMFUfkmaphjpv/Q89L36Jitu7/eoOEl7NR3tiE6tkkTRbzFoYYt1fO9I5p9Mc7IoXKWa67jNtTrqwhIms0T8GmvJLT1qBlttdr5+SdxFVr2DkAP2SjvKbhPZH0HBF6insnWsTkKNZNscZJ6kgzsqzDsCLveg3mWxZ1+BvZJLTaaAB+wPZrs/xM2KY1UpTN6je0FUGvu9bs1bhXq2aLvBr53nwNrspby+9uBAD7OFbeQlB70upTWLMiryeRMMmrZCrGfnnda3POm+pcOXlTfjWnGMgLx3CwvKrxm2JrJhHy84W8DQnX4lWa8pb1+O8+Iy+Swms5XN7cuMPFimUaPmNyFOuuSVCJL2q3tPKamJtLaq7K6/0vIyn3js0GwOF4eeMb4wmbrohW1JRDn74itFqnXHcZtyd4Oul1XTVxNDV5ZW5xO5CaH/mkpvhsrstZM31HsUbt5gGwjxfIm4WqCCRzUvOPwwjunXQ5Xx5WABtvijsiQnrDmzuJ+HhnXN9uGnMNqnZvnsb7VoBnqcoLAH8b5AXoFOQF6BTkBegU5AXoFOQF6BTkBegU5AXoFOQF6BTkBeiSEP4BSm1ChJlP+RwAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Invoice Total'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_3" Text="[InvoiceHeaders.Rows(0).Item(&quot;total&quot;).ToString]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="P42DcWh5ykikmihaFebDzA" CvElementArea="262, 430, 352, 23" CvType="InputBox" DesignTimeRectangle="264, 431, 351, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT InvoiceTotal'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='InvoiceTotal' tableRow='3' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl id='InvoiceTotal' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="84f33de6-9ebc-40f2-b9cd-a6fed104ce01" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWMAAAAZCAYAAADkDE/yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dQhDoAwAARBXt3vl2BIEMU1XTGTnDu91wTgODEGCPjEeIxhZmYbt/LG+O8EwF5iDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFvjB9PkM3MbN9WPjEG4AwxBjhuzhv5HbOjI8wfFQAAAABJRU5ErkJggg==" InformativeScreenshot="cb869c3dca6be88c35038b02e2916beb.png" IsResponsive="True" Reference="vCG0NV4g2EekjT7-dvx6LQ/ydlWYyEKFUOfendbOyLEfQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="26, 433, 94, 15" CvTextArgument="Invoice Total:" CvType="Text" DesignTimeRectangle="24, 428, 235, 27" ElementType="Text" FriendlyName="'Invoice Total'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='3' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Invoice Total:' check:innerText='Invoice Total:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAAfCAYAAAAP4pqgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJwSURBVHhe7ZdtbsMgDEBzxkq7UJWrdEfpDrIfPQZLwSxgTD60pJun96SoSgm2U/kBHQIAuAR5AZyCvABOQV4ApyAvgFOQF8ApyAvgFOQFcAryAjilK+/j/RKGt1t4yP2rODfvI9zehjAMy9f4IY8v8XkLl+tdbraQcl/eX/2Lwn/lz8n7Wu5hnGTdL5QsAsgLvwjyIi84Zbu8H+N0pBzDPX4aR8z4/SXcPuU+k+fJbTxuFvP1AmEtGvdr8fx06WNtPW7U0KUvbz9nmjOPFe+mfpu6llbemGPXAgAws1PeqdmK71KD5+a1RagaVGLMz8gOVsSs87bjWf4sU13DhOTY9L/VrFlyLsaUZ0rx4jP1wlHX1soL8BN2yqt2NUukco7IkcaNhn+iYlR549jCTqrmZto6ehjyWu85Ucds3yWO63erYiEvHMv+Y7PcRrQ8qvFjjJWdWYtQ5q3nt3THrVpN2pqWY9YiNrIKacfNF/LCORwrbyWDbvByFy5ZkbesQZFEK0Uprx/Ia+VckzeO59zynDEHeeEoDpZXdp3nvEWxS+qmbuRdkHBtfJ29O2/+XstryPwEeeFEDpc3N+x41RJ0GlzFqPJWzW/QGW9q72IsKJ2Yy/957VNFOj4jL5zD8fJKI8fjo7kTlQ0sEhR56rztuBYuCVLUZdbUw5A35yxjSt1zTC2vUafMmeelZ5AXjuIEebNQHYFkTm5sLbi1a+Z4+dIC6PFt4j6x5E3UMY3d/1vOPFYsWvGafit51xS/lTfm0AscwEa68gLA3wZ5AZyCvABOQV4ApyAvgFOQF8ApyAvgFOQFcAryAjgFeQFcEsIX/eNQ3S/LmNgAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'GST Amount'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_4" Text="[InvoiceHeaders.Rows(0).Item(&quot;tax&quot;).ToString]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="dtf4NFQrIESDOUHdTTSL1A" CvElementArea="262, 459, 351, 23" CvType="InputBox" DesignTimeRectangle="264, 460, 351, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT InvoiceGst'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='InvoiceGst' tableRow='4' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl id='InvoiceGst' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="9b713a12-e2d2-4482-b51f-4ae2fad78469" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAWMAAAAZCAYAAADkDE/yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACJSURBVHhe7dQhDoAwAARBXt3vl2BIEMU1XTGTnDu91wTgODEGCPjEeIxhZmYbt/LG+O8EwF5iDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFiDBAgxgABYgwQIMYAAWIMECDGAAFvjB9PkM3MbN9WPjEG4AwxBjhuzhv5HbOjI8wfFQAAAABJRU5ErkJggg==" InformativeScreenshot="01a5d457a2105036261004aaa34e0b98.png" IsResponsive="True" Reference="vCG0NV4g2EekjT7-dvx6LQ/lYy8uaY7KkmUOvkKstl6Ag" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="26, 462, 97, 15" CvTextArgument="GST Amount:" CvType="Text" DesignTimeRectangle="24, 457, 235, 27" ElementType="Text" FriendlyName="'GST Amount'" FullSelectorArgument="&lt;webctrl id='invoiceDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='4' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='invoiceDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='GST Amount:' check:innerText='GST Amount:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAO8AAAAfCAYAAAAP4pqgAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKXSURBVHhe7ZlbjiohEEBdo8lsyPRWnKXoQubDZTANFC2PogfaG6+VnJOQKK+GpE5B68kBgEmQF8AoyAtgFOQFMAryAhgFeQGMgrwARkFeAKMgL4BRBuR9uOvXyZ1OeTm76480V9wudd+TW+7SuKK11+X8/ZDeOo/vc+x7uUmNMX6u7mx17fAx7Mt7X1SZkjxlvUj+dV0/ZfhA7QopY6YCOY5ZLn5t/STyuRzZM0BLX16RLj81c6LAi9tCMPTXZWr6bhwI5JBQ/HNubukmhU8GeeHf0JU3CFefojnh6re2J1k3qeT7EPOBHK7dsq7880ZKIveYfIqruCSkWKestWhfSzF3XGudLMo1pD63uK9mnphwtvqU0HYSH0CPjrx6oO7zDMzxcbPyVqetljA2AZ8n/fM9u67LbgPNK4KsrRGz3Jsmr59nu7HIepp5OXnhRTryHr2S1ieLL9p1OTEZyI2s8rx8fCPLiohZvAIUc3XWIXPFcRPyVvOM9AGYZU5ekSAvXcHrvmqwzgSy3ld/965EDXXVCV3I20tW+TPj5xF5jwgOMMsL1+bx0zkEby1PYCKQRcoiIWSlvqYekbcYE8jXNy4m8sI76P5gVQacxri8qlCB8UAe/sX6BXnbveQyjouJvPAOuvL2hUuUAb8ruyZPYDSQ9/tFsWX+Q/J25i/m0vpIHfLCf6Avrye9t9aBluqVd00tKEPwqsE6GMjyvG4ikWcHaQ7Jm77n4tViyj6yPcekkfdBXngf+/IGJNh8kGZFF2mmr2cskGtpWmQeL8hReT0ydlt7s65qf2t7+X94bN+Xd2VLfvJ8bX0AfzAgLwB8IsgLYBTkBTAK8gIYBXkBjIK8AEZBXgCjIC+AUZAXwCjIC2AS534BSTQ80mozQ9wAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Supplier Name'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="388,218" sap2010:WorkflowViewState.IdRef="NTypeInto_5" Text="[InvoiceHeaders.Rows(0).Item(&quot;name&quot;).ToString]" Version="V3">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="Mvf66-l8-EyvWz-Px5ZTaQ" CvElementArea="253, 555, 361, 23" CvType="InputBox" DesignTimeRectangle="254, 556, 361, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT SupplierName'" FullSelectorArgument="&lt;webctrl id='supplierDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl id='SupplierName' tableRow='2' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='supplierDetails' tag='TABLE' /&gt;&lt;webctrl id='SupplierName' type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="9f3ad248-b1ee-4f5f-8cf3-a292dc0064bb" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAW0AAAAZCAYAAAD6xX9BAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACISURBVHhe7dQxCoAwAARBX53vR2wCKbQ1CzNw3dV7TQAyRBsgZIv2GMPMzA7YmxXtrxMAZxBtgBDRBggRbYAQ0QYIEW2AENEGCBFtgBDRBggRbYAQ0QYIEW2AENEGCBFtgBDRBggRbYAQ0QYIEW2AENEGCFnRfjzhNjOz//dmizYAZxNtgIw5bxIMd9sJEoPUAAAAAElFTkSuQmCC" InformativeScreenshot="ef7a36980ef775c78d2572c9486c84ec.png" IsResponsive="True" Reference="vCG0NV4g2EekjT7-dvx6LQ/M7Tq3CccqUika8XhwgInOw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="26, 558, 111, 18" CvTextArgument="Supplier Name:" CvType="Text" DesignTimeRectangle="24, 553, 225, 27" ElementType="Text" FriendlyName="'Supplier Name'" FullSelectorArgument="&lt;webctrl id='supplierDetails' tableRow='3' tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl id='supplierDetails' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname='Supplier Name:' check:innerText='Supplier Name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAOUAAAAfCAYAAAAYwAppAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL4SURBVHhe7ZhrcqwgEEZdo1XZUGq24izFLCQ/ZhkEocHupnHQiXO55jtVVErk1aYP6AwOANAVkBKAzoCUAHQGpASgMyAlAJ0BKQHoDEgJQGdASgA6A1IC0BnbUn5PbhwGN/DyMbkH3X43j/vI5n+46WNw4/2E1XzdQqz22HHe4XOmawB+l7qUlJi3L7om5s9Fzpv7FykppTwRin0YRjd9U10GUoJzqUoZ5DMTb3a36ilyLu+X0pdiPkgJzqUi5Z7Ei5LKE1X2TzLNy9+U7Oq03dMmShLnkJtDXEvur4VaZPN1UzjtjfuJIKU/Je/W24L1bKiOz83u27HFUzjcS3XGesR9X8w3F2wQl6J6Uq7J8OxVtVHKZSyWdPo1uLlNvq+lJCFZghav2ukEfJbESUovTTGGiq289tC3eFpbji23YZuHrmPjxH7sFVqNC67J5g89OZlYKROiVUr9fRb7ycRtaFORMvbXG4jsz2XbhLdLP3ZlWZSE4b4e83n8pexUl+NTayfsOMGV2JRyhZJsSc5QeII1SslOwERIwsNtuJRKFAbvH2VrSGglbxQhxVifq/i1mq9bzWvFK6SsbSDmJgCuRKOUjOLk6EhKLgQvaa0HpVzHX/pqKdXcoV62OS4lG1cUSHll9kvpEclzWMpX28R7z05KwWEpPbQZjfdZzmW1tdb9WycluDy2lJSAUrQVfnolKeW3T6yTSakTTMrc3MaUktZUkTqv7RUpPXGNfh4dm55XvU3EfjulrP0PWmMA/y3VkzIkiLVTh2Th9XQqsASLfXVSGm3YdXObfK2EI4HXzSKNyRL4RSnTnDy22JbLw9rQWot1eGQsEfuZ8HVYGyC4Gtuvr5RwoqhEipAQVJakCQmmToop/LXHaW6T67SUC3IdhYAvS+lJz6SQf503x09zpdj4vDKWiJZywRqbw58zuAaHvin3YiWlpqUNAH8BSAlAZ0BKADrjLVICANqBlAB0BqQEoDMgJQCdASkB6AxICUBnQEoAusK5H6bvklEaX+WDAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+            </Sequence>
+            <Sequence DisplayName="Enter Lines" sap:VirtualizedContainerService.HintSize="572,1700" sap2010:WorkflowViewState.IdRef="Sequence_7">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[InvoiceLines]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="510,1585" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                <ui:ForEachRow.Body>
+                  <ActivityAction x:TypeArguments="sd:DataRow">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1399" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Input Quantity w variable'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_7" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Text="[CurrentRow(&quot;quantity&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="lNz02w6f8EWcFRCc8s1uDQ" DesignTimeRectangle="632, 417, 177, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Input Quantity w variable'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl tableRow='{0}' tag='INPUT' /&gt;&quot;, RowInt)]" FuzzySelectorArgument="&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="c4750dc6-485e-41e1-8007-555dc42f6156" InformativeScreenshot="c8abe587d5eb4ab9f9b3124ac5426e24.png" Reference="vCG0NV4g2EekjT7-dvx6LQ/cUJ-0mwhdEKC3ODDPqmgaw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Input Description w variable'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_8" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Text="[CurrentRow(&quot;description&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="jUhBTgwmiUOiw078kKjSDA" DesignTimeRectangle="632, 417, 177, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Input Description w variable'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='{0}' tag='INPUT' /&gt;&quot;, RowInt)]" FuzzySelectorArgument="&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl type='text' tag='INPUT' class='' aaname='' /&gt;" Guid="c4750dc6-485e-41e1-8007-555dc42f6156" InformativeScreenshot="c8abe587d5eb4ab9f9b3124ac5426e24.png" Reference="vCG0NV4g2EekjT7-dvx6LQ/b2ZsNDO89UK0i_pr7fU1XQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Input Price w variable'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_9" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Text="[CurrentRow(&quot;unit-price&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="eXR3RRudkUmA43TiZvY_uQ" DesignTimeRectangle="1892, 417, 267, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Input Price w variable'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl tableCol='3' tableRow='{0}' tag='INPUT' /&gt;&quot;, RowInt)]" FuzzySelectorArgument="&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl type='text' class='' tag='INPUT' aaname='' /&gt;" Guid="52572b66-c900-4ecb-b17b-2f1bbf97c181" InformativeScreenshot="d53db3d372ff4461cf5bc3c7d8b46af1.png" Reference="vCG0NV4g2EekjT7-dvx6LQ/AFwRdprP70mI6kfsHodivA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Input Amount w variable'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NTypeInto_10" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Text="[CurrentRow(&quot;line-amount&quot;).ToString]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" ContentHash="DuyXckEFiEWYwf1qrxY2IQ" DesignTimeRectangle="2163, 417, 267, 21" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Input Amount w variable'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl tableCol='4' tableRow='{0}' tag='INPUT' /&gt;&quot;, RowInt)]" FuzzySelectorArgument="&lt;webctrl id='lineItemDetails' tag='TABLE' /&gt;&lt;webctrl type='text' class='' tag='INPUT' aaname='' /&gt;" Guid="b92487a1-d4a3-4f7d-803f-37da492f0dcd" InformativeScreenshot="5ed5d7b10bb373acbaafee063b979589.png" Reference="vCG0NV4g2EekjT7-dvx6LQ/tzRr1dpW3UmrBILkwLfc3w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Add'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Version="V3">
+                        <uix:NClick.Target>
+                          <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" DesignTimeRectangle="627, 320, 40, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Add'" FullSelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl aaname='Add' tableRow='1' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl aaname='Add' class='' tag='INPUT' type='button' check:text='Add' /&gt;" Guid="06515709-7efc-48e8-b5e3-a0cea60f0727" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACwAAAAZCAYAAABKM8wfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAEuSURBVFhH7ZfNDYMwDIWzYCSm4YCyBieYBMQYHJiAIyO8YpNfGnooippUWHpCYAOfnRckBAqLcoHXdUXbtqjrOisRE7GZsMCUmKYJ27ZlJWIiNhMWmLqJ3ZCDiM3EA5xCt4GXXkIIiW6O550WdJWA7JdITj+n6rBEcr5uAhOEhGrkJYhTDsCjOl5CR6EwxGqsMgAeGgMwQAkBNZ5q5g5yvy5IlYIKgI8GOLdbilYpMTBBOu/yhJrBy58myqvgzsOJHg2nBSYAH5Cn6dmCz/3N6Dfwbo/ElvCXM1Q40dDXHy1k9oNXH9N3wOdpagVTymnC737VCiD1Kpg6zjlIfoZtWtemAb74IrBOkGYzsfavhLXEUU8WMVZSTUpL/FAPcGr9B3BxfxzF/dOVEoUBAy/oKSEN4ko4OAAAAABJRU5ErkJggg==" InformativeScreenshot="8bdfb23ce3c17ee4addbcb379fe0b38f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target DesignTimeRectangle="627, 280, 1804, 22" ElementType="Text" FriendlyName="'Item Details'" FullSelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='1' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='H3' aaname='Item Details' check:innerText='Item Details' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAABxAAAAAaCAYAAACXU8mEAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANoSURBVHhe7d1dbqMwFIDRrDFSN1RlK+lS0oX0ocugJAFzITY4IbSReo50H4bhxzCPn5zZNQAAAAAAAAAdAREAAAAAAABIBEQAAAAAAAAgERABAAAAAACAREAEAAAAAAAAklFAPL3vmt3uPIfm1B1Lvo7N4eO7+8Mr+G6Ob/1687N/ynpPzeH95mvU+TyktRw+u2Ptd9w/dX0AAAAAAADwPFUB8ftj/4LBazkgXicTQ2v1AVBABAAAAAAA4J9YDogvG7xqA2I7DwXAU3NYdX2BgAgAAAAAAMALmw+IYQddnFH4mp7zdmxGWWwSzPrdjNfZN8ev62nDs9uZ3iMrBMTc+aN1Dc/pjdfRToyEYc2lc26un/z9xV07EEOwTLNi9yQAAAAAAAA8YFVAHEW/0YRgV4pxafbNPreTcDEiLgTEs7D+IdbN7Vzs3nshIJbfu524ltqAOPuNbuMnAAAAAAAAbOXxnzDNxbEY5/rdeKM4NsSw5Z2IS+GsIiDGXX3deobnxvsP5w3vWPoJ09y5cd3h21UGxOy1xecDAAAAAADAdh4OiOncabxL0Syzmy+GsBDXSseHMJlTExCn52QCZyeFxXSv2oAXzrtMCJN3B8SldwYAAAAAAIBtPRgQQ4grThfSCgGyeHzTgDiNfbnp330uIM7d5/6AmP3/FM8zGy4BAAAAAADg+TYMiF00qwiIo1D41IA4jYA1AbEPgKWAOL3H9Vtlfxq1MiCexV2I0xl9NwAAAAAAANjQ+oBYjHedvwyI4V7XZ5eiYE7+3LhbMK5vbUBMwjXDhH8PAAAAAAAA2ND6/wNxKW79VUAM9x+i3h3hczEghlDYGr7HyoAYlJ4FAAAAAAAAW1kOiIWQNtopl46HQNff4zcC4tIUdhAO6wnvmMJiPjZmrx/tGrw3IGa+Wac60gIAAAAAAMCTVATE21DXh7Ph/NtZ3HH3awFxGt/mrivtKuzmEiJDbMzOAzsQw7HcjL4bAAAAAAAAbKgiILamgauwo+86k5/b/MOAOBfebuNnbpffJBb2OxGz32M4Nz23NiBe5MKkny4FAAAAAADgd40CIgAAAAAAAPC/CYgAAAAAAABAIiACAAAAAAAAiYAIAAAAAAAAJAIiAAAAAAAAkAiIAAAAAAAAQCIgAgAAAAAAAJ2m+QENrbNcxfUqTQAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NClick.Target>
+                      </uix:NClick>
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                        <Assign.To>
+                          <OutArgument x:TypeArguments="x:Int32">[RowInt]</OutArgument>
+                        </Assign.To>
+                        <Assign.Value>
+                          <InArgument x:TypeArguments="x:Int32">[RowInt + 1]</InArgument>
+                        </Assign.Value>
+                      </Assign>
+                    </Sequence>
+                  </ActivityAction>
+                </ui:ForEachRow.Body>
+              </ui:ForEachRow>
+            </Sequence>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Submit'" sap:VirtualizedContainerService.HintSize="572,157" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="e8508300-f484-4392-bc85-a5ab4e9387da" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" DesignTimeRectangle="22, 320, 58, 21" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Submit'" FullSelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='INPUT' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl class='' tag='INPUT' type='button' aaname='Submit' check:text='Submit' /&gt;" Guid="b55edb76-c7ce-4a5d-af6b-f878ca1b223b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD4AAAAZCAYAAABpaJ3KAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFdSURBVFhH7ZhLjoMwDIZzQaSehgXiGqzSk1BxjC44AUuO4MF5GtdQyrQdhiTSL5HYJv4ckwUKEh0ZfBgGaJoGyrI8pZANGf0I4Gjoug7GcTylkA0Z/QjgWBUp4ExCRj8yeAZfVQ/6okCpqPom+UmyscW1F2wv6lZPe9fQSrYV7QR30FVL1lqoN8N/CPyuoVAF6DvzEbQTXIbsrwUrxpLeCE71eXDpxJkekqDF8uDarJlP5aKh97HuFDUW0tkxrq2cr5tT39a939qfw+8En2TAYiIPp7cBPCbICmlg4jtNJ4VYVwBfqO+2+lw+MZrcJnDaMRSAPgtzs98RwL1sAZaSkFqddInxPzo4bka/Sbq+F5zGMlA+/8MTdxfJ7HLj7Wt9ApxJkLV6gGGxxwVH+eSj+AVnW9/ZK2385ye+fqu/DE5ysvss6xfg/1sZfBoZPFnwZP/AJPvPLbWRKDjAD5uHH6wvKJ35AAAAAElFTkSuQmCC" InformativeScreenshot="2569ff8cf4a2dbd86ba873e12a7a668e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" SearchSteps="FuzzySelector, Image" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="22, 280, 594, 22" ElementType="Text" FriendlyName="'Invoice Details'" FullSelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='H3' /&gt;" FuzzySelectorArgument="&lt;webctrl id='headerTable' tag='TABLE' /&gt;&lt;webctrl type='' tag='H3' class='' aaname='Invoice Details' check:innerText='Invoice Details' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAlYAAAAaCAYAAAB1oBIhAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANjSURBVHhe7drZbeMwGEVh12ggDRluxSnFKSQPKYNjrbwkf242lQVzPoDAxNZCcR50wOTkAAAAMARhBQAAMAhhBQAAMAhhBQAAMAhhBQAAMEgQVvfLyZ1O07i6+/rZr/B5c+d5Xid3fv9aP/wuX+72tq2LPcbM6e6ulydX/eO6z+X6sX72o2sGAMD/ibCqqofVMl5Ysy2MCCsAAP60vxFWP6o1rB7jqTC6u+tL52cQVgAAfLt6WEW7IV/v5/3n7bOFBEgSCPLd2+3xk5DrL+Psbp/rd5tKJPh5ryO+xywNJD/3ksLcJ8H807nH6xWsjTxX7pjk/Oj7WdeOlYTcPghpAABG6Aore/iY8BEQvajlJa8xkwSRjCAGuiJhGzKHXMBMo7pLVAmriayRn18acn6sc6uEVWl9grm0hlVpHaygBQAAXTrDyooo+8WtAWUGl15X4sbPQV70ViQ8WMem88qE0X7/WlA0hJUG3vosfh56fX+cf47crwKtY/WZ7bUshZV5bvb+AACgV1dY6QvefiFLhBQ/y73kJ8Z1zbAqB4kVGBp7Oq/wuWItYRUfYz/zZA+u/VqtYSPHzUOCrTus4rUAAAAjdP+NlWcHQbI7ZYZNKSaMkLHCyowtg8w/O4pB80xYxRFkjW2NS2tRuk5/WOluXjCKzw8AAFoND6s4pJLQmpViwpjH0WGVDaZJS1jFz1MKom1sYZRbi/gay1qYv2JsDKuJ7lrFo7iOAACganxYaYhcbvLvTDQkYXXcjlU4/1YNYSX3WOZSer6YfazuLum8Xw2rnZzjh8YvAADodUBYhVFgn5u518y4rhkJufuvIVQ8t0clrOT6PnYaYmxXCysJqAe/bi+GlcjdCwAA9DkkrILv5mHshOiOiZxvhkMmEvyxMrfkuhI5mRgph4eeXxlmGGVicA8uO8LM8/XZusNKnyP8/8hHLgAA6HFQWIXRY30/CY6JRhA72d2XOOB02GGWjOqOUmtYxVFSOi/cGUrWYV6v0rNNozesws+sEa4tAADodVhY5c+LJC/7MDpm2bBapIFm7bwYoZIJvlA9rEpB8tTcttiL1yYKrv2+rWE1s4LNWHMAANAtCCsAAAA8j7ACAAAYhLACAAAYhLACAAAYhLACAAAYhLACAAAYhLACAAAYwrl/PW+g67agj38AAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="122, 15, 2453, 1399" BrowserType="Chrome" ContentHash="FkEu5JWA9UmP2uDkmzGwKw" IconBase64="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" InformativeScreenshot="c2126e12cd385572c5d2aece2baab8c9.png" Reference="vCG0NV4g2EekjT7-dvx6LQ/weEaba3XrUykx-ka-0Oilw" Selector="&lt;html app='chrome.exe' title='NewInvoice.html' /&gt;" Title="NewInvoice.html" Url="file:///C:/Users/james.dickson/OneDrive%20-%20UiPath/Documents/Document%20Understanding/NewInvoice.html" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

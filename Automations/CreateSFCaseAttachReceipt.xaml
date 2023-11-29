@@ -1,0 +1,501 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateSFCaseAttachReceipt" this:CreateSFCaseAttachReceipt.in_AccountName="Lazy Panda" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Account_List.Bundle;assembly=CEB838E7EE7_Account_.WRjr04wfqFE1EReE02B5TcW4" xmlns:uiascb1="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_curated_account_Create.Bundle;assembly=CEB838E7EE7_curated_.fNcDg159DbO1663iC2a576G2" xmlns:uiascb2="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Case_Create.Bundle;assembly=CEB838E7EE7_Case_Cre.GsKAN379XgP18UTbV1wJxx" xmlns:uiascb3="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_curated_upload_attachments_Create.Bundle;assembly=CEB838E7EE7_curated_.nyFE823IOPR1QCDkc44a0Xt1" xmlns:uiascb4="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Attachment_Link_Create.Bundle;assembly=CEB838E7EE7_Attachme.bMFTJ48QNjF1n75tC3gAwao" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usia="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usic="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_AccountName" Type="InArgument(x:String)" />
+    <x:Property Name="in_FilePath" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1430,2459</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>CreateSFCaseAttachReceipt_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Account_List.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Account_List.Bundle</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Case_Create.Bundle</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CEB838E7EE7_Case_Create.Bundle</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Entity</x:String>
+      <x:String>UiPath.IntegrationService.Infrastructure.Descriptor</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Enums</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Telemetry</x:String>
+      <x:String>UiPath.BAF.Infrastructure</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Connection</x:String>
+      <x:String>UiPath.Slack.IntegrationService.Activities</x:String>
+      <x:String>UiPath.IntegrationCore.Activities</x:String>
+      <x:String>UiPath.BAF.Activities</x:String>
+      <x:String>UiPath.BAF.Infrastructure.Contracts</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Case_Cre.GsKAN379XgP18UTbV1wJxx</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Case_Cre.GsKAN379XgP18UTbV1wJxx</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.qDhDUlFw9J11zhPd3G9Lfm3</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.qDhDUlFw9J11zhPd3G9Lfm3</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Account_.WRjr04wfqFE1EReE02B5TcW4</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Account_.WRjr04wfqFE1EReE02B5TcW4</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.fNcDg159DbO1663iC2a576G2</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.fNcDg159DbO1663iC2a576G2</AssemblyReference>
+      <AssemblyReference>UiPath.BAF.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Infrastructure</AssemblyReference>
+      <AssemblyReference>UiPath.Slack.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.nyFE823IOPR1QCDkc44a0Xt1</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_curated_.nyFE823IOPR1QCDkc44a0Xt1</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Attachme.bMFTJ48QNjF1n75tC3gAwao</AssemblyReference>
+      <AssemblyReference>CEB838E7EE7_Attachme.bMFTJ48QNjF1n75tC3gAwao</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="CreateSFCaseAttachReceipt" sap:VirtualizedContainerService.HintSize="472,2457" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="uiascb:Account_List[]" Name="SFAccountList" />
+      <Variable x:TypeArguments="uiascb2:Case_Create" Name="SFCase" />
+      <Variable x:TypeArguments="x:String" Name="SFFileId" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACp1VbW/aSBD+KyN/oZUcF9JEjVATKSFuS480KXBFalVVy3oM26x33X2BcFH++83aJkCh0ukkPuCZ2Zlnnnlm9zF6J1BmtqeVY0KhibqPUV+V3tX2qPvtMfrECoy6kVBc+gyvUaLDLIqja2FLyVaNu1+7Idv40XIjSie0Iv+oRC7yFYh8HQJ6+hO5s2Dn2ssMpghNjYz+gJsjWGSGzxNKNl6VocpUa4lMkaECONCcNfk/ezSr6Cl+xluwB1H4Yohcm8wO0XmjDuC+YQ9g6pg9zGOC0KQB5YspGtD5Ohqcpr8h6waeUA5nxCLB06ZgruLFvT6uMufMS/eFSU+RnXa7HUe3qsfUghHNznjcwq68lHbArNuD+yl4QDauXYa1cQRz7f9/rFFnaK5We3Vvgx2mq4Mc5SHrC/syUKKbwASIAsAHVpQStx3Qz4BZjioTagbeIrRqSyuBS/BK/PIIi0ATvLCez8kF/euXUHjrgkZKoxciaIRyWl+WoeuSzYSqegI21QuEwO/WWBserDNU87/QsJyjwT0SJmvrHgO99POgUSv1XBq0lpwxNV3puEoHXDJqN4alcKR4V3kmH9JhCve4WhLUOOiegVuVgjMJI8pJZJhdLuOq8bpUTub1Frk5c7AMdcL0odCZoLnQlqmAguWO2G99ZAo6pzEctzsnrXhrx7ZQEz4pA9NvxUUF/Dwo8abJd80cXpy3QoKjdueoczput7vVLyHOv7bevhIXCRBTYYOFpdEYIi8Upw9dCEebHwOjCmvgtFIBx0wswhmaFDBqol6t+ipg6wHTZ87snEAmB6a6u05/nPJ3ivTu4B33Ubgfl5xrr/Y3b8u+M/4NkL/FHXPzhDYeZ6YqOkKzEByTS+7EQjiBNhlNUuXqv7306uz1WfomTd+sq/4YCNrcK68yGU5tbN++x3AoPpkMf5r2yTL/9S7tpENM28dXp2M+OYnhC5owzvNOQqNJ2nSe7h9P41TonWEyhjs/lYL/hauxvkd1Hu4O6maIJDq6X7o5kyTXPVr7lmiquNtYbuj1GKIttbK44/p9BjXzNIQnOqasY4rj3VoiVOIxamBTbAWcANHrpEgp2hBSMntREs1Hlkm0tAAcj2yecYprWF4143iP9KCJ4LgtsZ4HWQOZtOlRj/E5EjJ978vqUq6K31aarCdOsuhnu4OvBdHT0hcqCOfZR5oaVTKs7/3fA4NIDqupIuKO8Xs2w93Ow6Px3Pm26zg5PQtNbUHdwrjXaxx9cK68QbpzQjfv0zGZglDp49Xm3ICpmScQZMXwUtC7eEefI/FP81w9/QvIfqLpLQgAAA==" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="410,183" sap2010:WorkflowViewState.IdRef="ConnectorActivity_3" UiPathActivityTypeId="3429b475-2be8-363b-9833-9ff2f11af445">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="Jit_Account">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb:Account_List[]">[SFAccountList]</OutArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="maximumRecordsReturned">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:Int32">1</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="_where">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">["Name='" + in_AccountName + "'"]</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <If Condition="[SFAccountList.Length = 0]" sap:VirtualizedContainerService.HintSize="410,1332" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,879" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence.Variables>
+            <Variable x:TypeArguments="x:String" Name="SFAccountId" />
+          </Sequence.Variables>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,141" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;No Existing SF Account found - creating a new one.&quot;]" />
+          <isactr:ConnectorActivity Configuration="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" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Create Account" sap:VirtualizedContainerService.HintSize="334,387" sap2010:WorkflowViewState.IdRef="ConnectorActivity_4" UiPathActivityTypeId="111d59b7-0301-31ba-bcf4-ed6d3e37c7bf">
+            <isactr:ConnectorActivity.Arguments>
+              <isactr:FieldArgument Name="Name">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">[in_AccountName]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="AccountSource">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Type">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">Customer</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Ownership">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Website">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">["www." + in_AccountName + ".org"]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Phone">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">555-555-8899</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="BillingStreet">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="BillingCity">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="BillingPostalCode">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="BillingCountry">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Description">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Industry">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="AccountNumber">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="out_Id">
+                <isactr:FieldArgument.Argument>
+                  <OutArgument x:TypeArguments="x:String">[SFAccountId]</OutArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Jit_curated_account">
+                <isactr:FieldArgument.Argument>
+                  <OutArgument x:TypeArguments="uiascb1:curated_account_Create" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+            </isactr:ConnectorActivity.Arguments>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </isactr:ConnectorActivity>
+          <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACr2ZUU/jOBDHv0qU59IrcNyySDyUUtjuUloBC3c6rSI3GVofqV1ih9JDfPcbO0kbx26RSHTLy2b+4/jn8XhqO2/+BYU4Ej3OJKEMEv/kzR+wRSozu3/y95t/Tebgn/jdMOQpk4PIb/nnVCxisjIVb3CuJBBhQheSclaV7lYL5S5kQtkUn29ALDgTaJNJCi1/xHqEvRBRPGuGKx6S/GVnPFr5760NkRDg5FF2J81G+Ijlo75HCZ1SZnXdIwK8jWb0bmqfAmj5fZbO9azckzhVLxjPOANNVlj6c0Jjw/IAE//9V4n+BojgW+g3mk2/1pqiHzAhSRxnbsYgnlO6mAOmTo/PFzG8UpnFfz1uSB55MicsNEd/lgB5ivhy2+twVHRqihcA0YSET4ZxJGe4HIyo3fI0CcGRcDo2mepKO0uum3y6vROiUOz+c6WpiRtCOCOMhsTMtH4MIb7abebob5hvsc9QpknF2xX6dLGIKUQqGQhb2YPf2M2hr+11Y65LZOgqN7ninPmyVJeg/OoqQ0UzIEyt6SJ8TsmUcUFF0OMRiCAIbbjCxdMuNqCl1w1VkS5ZKazyaKvXjaIEhE1TVeuy9BkWfADV+gaer9P5BBJXlEp+WGefvczTxtvmVpdzIPoC1y2RYKe4oZg4JSUnmHAeA2GfQLhMyKMMumruMh9XnLSTV3KymFwe9Zf/XP18CAtnwCQkjMRe2cPAcXk0leD6sYpUGA2K3Fh737PEXWJwkcZxoCyuCdIunnLxnCS23giUozJnPTnqckmo2/eYJDinjs4zwdM/vg4ES64PIim+MTgfnblmJZc9lB0sZa0KcqG2WRItEa5zfB4S8YRPK/y3NxzuRVEN2G05VBA5E6giNrWWsp20RVJYTYTcWnvSuMSRUBJfUTKhMW5yndEovLy1m03k9Glqu3fNjR3aX/grbezPxgluc2gIQb7jcY4i9/FyH3sItkPt+BZc+ld9J9V6r+BmKuTGiLamftGjO/cramM4OqN38mxZCVW5PhGdk2QV4NEQTwZ4vHNDaSdv7eTgsj2aQhuC3sQNznehZU7O0u/waACNJ3ldqOKshSpFITRVJb7R6cyoE0OIKPqUTVd8WS0dPMJToDuUWnKgF/amyC97+53fOwaoMv1RNR12DmyT1fDQbnhkNzyyGx7ZDfd1w0rAXmiE+be9gmQO2yqIqdbPvAJnPNhNMx7sgNFi7Z9yCDmLPqwea7cd9cPt0xzgzhqy6Xx7FXH71AdMXrCaX/PlVrTCwQ1lqrVxrrr3lGf3g06aq663drBpKur/tRu6lUSm9lFxYzYpC3NjeLA0r3958qTeaNzIrc/tZWsv5kKZzKu3yT94e2ePZmM3h7O2N33V9ICfEqLglv7rvmbSsqdlC8rUPpeVv5A4lc5vI9+pDNRJzmIqjAbMhuAnxbPMrK1uCKaJ7i1fQO0ubqpeKJ5zRPv2oY8be/3fXv/s+PC4/6Xf/6L7C3p42y2hfYaji6FdMrU8l2/7UvzoXh9++frndLx//PNucr+//P762vLuIRHY++l+u6P+sHUa48UsnDJIJd7PtrxxOsHrlB+wuuNPwE4ZHt915J5TEHg4fCSxcEzpQGBodLw2liF+aSoibkjVsGfR1tmYfSjAGozHZowsXqhgF5i3GTb6anAEwqMDw+zjCZKiGW/9McB7gsQg8HNBCHviMVKpk8d3lU/EJeCFAN5O4wgWkM2Emj0dSkxBnMdwBsjGn9KFXiy6+5HO9GyqMRnwEmAz41ka9HiczpnKlUzAHMJLb8y67FBd9VKp4UggHYExfqEgUzCHfFAeclk6aB8dq9GUCAs0xwhb/jcpF0OQM67GMB7d3qFN5SY+/Za3uyJsmiIBmkBV0yF5HeOjWlT+yX6n03n/DygtzupPHAAA" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Insert Record" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="ConnectorActivity_5" UiPathActivityTypeId="7196c11a-8850-3802-8a07-e50b91ae81fb">
+            <isactr:ConnectorActivity.Arguments>
+              <isactr:FieldArgument Name="Jit_Case">
+                <isactr:FieldArgument.Argument>
+                  <OutArgument x:TypeArguments="uiascb2:Case_Create">[SFCase]</OutArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="AccountId">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">[SFAccountId]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Description">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String" />
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Subject">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">["New Claim Receipt for " + in_AccountName]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+            </isactr:ConnectorActivity.Arguments>
+          </isactr:ConnectorActivity>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap:VirtualizedContainerService.HintSize="376,271" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACr2ZUU/jOBDHv0qU59IrcNyySDyUUtjuUloBC3c6rSI3GVofqV1ih9JDfPcbO0kbx26RSHTLy2b+4/jn8XhqO2/+BYU4Ej3OJKEMEv/kzR+wRSozu3/y95t/Tebgn/jdMOQpk4PIb/nnVCxisjIVb3CuJBBhQheSclaV7lYL5S5kQtkUn29ALDgTaJNJCi1/xHqEvRBRPGuGKx6S/GVnPFr5760NkRDg5FF2J81G+Ijlo75HCZ1SZnXdIwK8jWb0bmqfAmj5fZbO9azckzhVLxjPOANNVlj6c0Jjw/IAE//9V4n+BojgW+g3mk2/1pqiHzAhSRxnbsYgnlO6mAOmTo/PFzG8UpnFfz1uSB55MicsNEd/lgB5ivhy2+twVHRqihcA0YSET4ZxJGe4HIyo3fI0CcGRcDo2mepKO0uum3y6vROiUOz+c6WpiRtCOCOMhsTMtH4MIb7abebob5hvsc9QpknF2xX6dLGIKUQqGQhb2YPf2M2hr+11Y65LZOgqN7ninPmyVJeg/OoqQ0UzIEytNgUlU8YFFUGPRyCCILRhChdPu9hAll4XqkiPrPRVebTV60ZRAsKmqap1WfoMCzyAan0Dz9fpfAKJK0olP6yrz17maeNtc6vLORB9geuUSLBT2lBMnJKSE0w4j4GwTyBcJuRRBl01d5mPK07aySs5WUwuj/rLfa5+LoSFM2ASEkZir+xh4Lg8mkpw/VhFKowGRW6svc9Z4q4wuEjjOFAW1wRpF0+5eE4SW28EylGJs54cdbgk1O17TBKcU0fnmeDpH1sHgiXXB5EU3xicj85cs5LLHsoOlrJWBblQ2yqJlgjXOT4PiXjCpxX+2xsO96KoBuy2HCqInAlUEZtaS9nO2SIprCZCbq09aVziSCiJryiZ0Bg3tc5oFF7e2s0mcvo0tb275saO7C/8lTb2Y+MEtzU0hCDf4ThHkft4uY89BNuhdnwLLv2rvpNqvVdwMxVyY0RbU7/o0Z37FbUxHJ3RO3m2rISqXJ+IzkmyCvAoiCcBPM65obSTt3ZycNkeTaENQW/iBue70DInZ+l3eDSAxpO8LlRx1kKVohCaqhLf6HRm1IkhRBR9yqYrvqyWDh7hqc8dSi050At7U+SXvf3O7x0DVJn+qJoOOwe2yWp4aDc8shse2Q2P7Ib7umElYC80wvzbXkEyh20VxFTrZ16BMx7sphkPdsBosfZPOYScRR9Wj7Xbjvrh9mkOcGcN2XS+vYq4feoDJi9Yza/5cita4eCGMtXaOFfde8qz+0AnzVXXWzvYNBX1/9oN3UoiU/uouDGblIW5MTxYmte9PHlSbzRu4Nbn9rK1F3OhTOZV2+QfvK2zR7Oxm8NZ25u+33/ATwdRcEv/dV8zadnTsgVlap/Lyl9InErnt5DvVAbqJGcxFUYDZkPwk+JZZtZWNwTTRPeWL6B2FzdVLxTPOaJ9+9DHjb3+b69/dnx43P/S73/R/QU9vN2W0D7D0cXQLplansu3fSl+dK8Pv3z9czreP/55N7nfX35/fW1595AI7P10v91Rf9g6jfEiFk4ZpBLvY1veOJ3gdcoPWN3xJ2CnDI/vOnLPKQg8HD6SWDimdCAwNDpeG8sQvywVETekatizaOtszD4MYA3GYzNGFi9UsAvM2wwbfTU4AuHRgWH28QRJ0Yy3/BjgPUFiEPh5IIQ98Rip1Mnju8on4hLwQgBvo3EEC8hmQs2eDiWmIM5jOANk40/pQi8W3f1IZ3o21ZgMeAmwmfEsDXo8TudM5UomYA7hJTdmXXaornqp1HAkkI7AGL9IkCmYQz4oD7ksHbSPjtVoSoQFmmOELf+blIshyBlXYxiPbu/QpnITn37L210RNk2RAE2gqumQvI7xUS0q/2S/0+m8/wfWCWFUPxwAAA==" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Insert Record" sap:VirtualizedContainerService.HintSize="334,183" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="7196c11a-8850-3802-8a07-e50b91ae81fb">
+            <isactr:ConnectorActivity.Arguments>
+              <isactr:FieldArgument Name="Jit_Case">
+                <isactr:FieldArgument.Argument>
+                  <OutArgument x:TypeArguments="uiascb2:Case_Create">[SFCase]</OutArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="AccountId">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">[SFAccountList(0).Id]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+              <isactr:FieldArgument Name="Subject">
+                <isactr:FieldArgument.Argument>
+                  <InArgument x:TypeArguments="x:String">["New Claim Receipt for " + in_AccountName]</InArgument>
+                </isactr:FieldArgument.Argument>
+              </isactr:FieldArgument>
+            </isactr:ConnectorActivity.Arguments>
+          </isactr:ConnectorActivity>
+        </Sequence>
+      </If.Else>
+    </If>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACtVX3W8aORD/V6x96QtwQHpqhJSHBIigFwLNkra6UxWZXQMuxt76g5SL8r/f2PuRXXYJCeLlkofEM7Oe329mPB4/edeUsFB1BdeYciK9zpM35JHRsdzr/PPk3eI18TrenDLi1bweVRHD20R4qTUOlmvCtVURFUgaaSo4qHCmUkgLNCPIREzgkIRgOt1GuT19IfVYhtZ9q+bdkV+GSjDraGlIzRvzLuYbrNK1g3YjApw4GhmmaYRlAoEuQPjkTYSisUHr+bmWschj3CWzoyuwya2QmCO9JMiCRxsiVWyfUFJaUr4okmofJnElwu0e/O08fpspCGlPBMaGdhiWWFxbWMNeicEUIBtOfxmCaAif0jklEs2FdGTS3LyD1ZlNlYoEVyRlla67RmL9ksFKsjlSs4R8gcdLRHIkLNQYi4Ufos/++BbZzx2RXMk1KrC/rXCGakBDCFAMviL2FlhF3BNtjMbFf9f/brQOhSXZMbPY55G9GBzlsub1uVm7s/4VM2M38B2OdNUvrG685x9llCMRupT0IPF7ka4TIxTGVqUMCbnGGiRWX9cUPq55I6xWINrCT300qofhh+mHwaCzXneUavi+//fxob2XbC9W43SHamh34/5vTSTHDMKAfWFkQCpKJTWyYcBIObPqknmzu7Qf8LloveIvMUMU7FDrRA7bb3XYPsLhNZVKT8yMUbVMzSq7HpihKLbLTsRpzuFQXSpFdJ/jGSNl10OFsNUjkhkkHmdCMIL5US5H+KeQX7M+XHK5tvpyoz7e5QTrJdxSjCaXecGh+7PbjK0wfxmeINRjSRe0zDcTn6q/dQsdbVDsaONHmIQqaszJT1NSdwQrwaHddZeYL8oNM9a7Sy1ILd57cvwltpbj6mEn0SKRqk8V2kvGxCOcgnyAYS/YNrAjQSHSCYiJpBscbPdijDL9qUDeFuBNiqimeNFVmxIaEKPAyd+biSnVFbNzJi2Nadpq8iergXbPGnqkjNmhOgD6MM/BvAxdCIVkjmGqQXSOuEAbyw9RhSLboMIT1G3SkOztVuKT6NyldrSrHzAqG135APlfjr6H5v6YbD7En6l+COJNHmJoD7m5tsT53pkgnHbgIvMXGvfUNvjGEGK4gM1B7RO5oQFpXAaabuCtQWCa+taH6Lh/u/2r87Pz/qd+/9MrcB66koCqcWV4CGV60LCGqvZt8O11/7x9NhxP7lpfur1V8PEjbn7XrRpKiuqi1WjaX/geyttIcsGJ0RKzGnKzQfAX2U7FivALbpid2+wjEpqO15ljpiryMFQQZ5eMQ5mBzgBPYqUxD8gES4g6zDawD7SPpFQ6nkMHXqFEOQm0kAAHxAZeF3pZV5gRBdUWkLqahwHYjWc/wSzJ4KvJHmgdjYheCsBp34S2VLwuGBDAKlYmcj3MwgH5BAcrvCBFXHboynDlVe3Gn+fvwjKOSFw59jC6dJYAjv0pyGylweqPV3e7gWvNAFowhMeWHfN/T2Dp039B1Go2m8//AYR0G46eEAAA" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="410,183" sap2010:WorkflowViewState.IdRef="ConnectorActivity_6" UiPathActivityTypeId="39d012ef-9d30-3438-b9a7-0600573234d2">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="_file">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="upr:IResource">[LocalResource.FromPath(in_FilePath)]</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Description">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="out_ContentDocumentId">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="x:String">[SFFileId]</OutArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Jit_curated_upload_attachments">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb3:curated_upload_attachments_Create" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <isactr:ConnectorActivity Configuration="H4sIAAAAAAAACrVVXVNaMRD9K5k8X6mgjg4zPiDCFKtCBe1Dx3GW3AWiMbnNB5Y6/vduci8WhNqHtsMMZD+SnD1nszzzrkSVu7bRHqRGy5vPvKeL4Es/b3595pfwiLzJYw5qf2pEeKTfXs4zfipdoWBRZXSlQtY7jX50wsrCS6PJP5pFNzMT5mk1iVneMPAexIySR4si7nbeSj0le2is79s8gqln/Aq/BWkx501vA2a8r9ug5+CWdgJ6bgRUl52YfFEikFOyn/nAOFnG6i8v2Ws551I/YN7RXvrFllquUBibb6vmVyUqHcHM+B6FZy6IGQPHWkKYoH3GEqmCFucIecb6RUGFBU33UWxG5aNlwaF1GZtaEwrH0Iv3+Wj8Pz6GM7CYrn5LRYowX4U2lC3QPkrnyEFlAPVIHtWN/MTilly5eEheii81AyJvbMEu3q937x/Xm/GODo+pq29AhXjtjcQngjl4rYJHUpbRtlEKxsaCN7/N6ekJ2ljcavx2hdob6eRYKhJ+g9v10Bq3wwKFnEh07GmGRKElHqWrGHQM5iAJWvWWlFq2kiQFrIZXm3BX3CdHjUXN5qBkHr8DHR/VbSl1Xeb3qv3JjLuT/Hky3xdr/6/EaWwTZwnrDd8rCNciq1BJgVsCFPzWYXYm/V0rDaA4y+7iMNg+zmw5B+JT39r9Jl2wnAHU7JPNXRVn13IAflaL8OmhxDOGaOdSYK0lvJwTD+hqwy9pJMVlu3NytHfUOex0Dt9ivWtbBI+1k6BzRfu3RmnKbDmhNr7ojs72jz5f3nfr+vDAt/emrScwGbsh2gjUcb22Gz+0PSgfLB5rDN6CytggjJUUn3AxMg+oj3VQipcvFJ3nzQkoR6L3HLGbKF+2Qc9d0L/LFbrCaIdrobcdUgqW3g8J7TxogQOwpAiJThKS2CVMyk1ACQANWk3sG0vIyB1kQTzvOFDoJsYK3HGTPA7WfhKpUndT/Y/eFxf00gyBi41JKOhsSkICaB5CkdosYiD/AMQDTHEdTGMVzGqoUTs4+jOAPo3SJQ+lhBuo+sMR+WIfkfVh84hz0NNAuCiKmuwL+D4gcyh/kKu+u7v78hPjeZNE8wcAAA==" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" DisplayName="Add File to Record" sap:VirtualizedContainerService.HintSize="410,285" sap2010:WorkflowViewState.IdRef="ConnectorActivity_7" UiPathActivityTypeId="59f1af6c-8ed8-331c-bf7d-4637e271567f">
+      <isactr:ConnectorActivity.Arguments>
+        <isactr:FieldArgument Name="ContentDocumentId">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">[SFFileId]</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="LinkedEntityId">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">[SFCase.Id]</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="ShareType">
+          <isactr:FieldArgument.Argument>
+            <InArgument x:TypeArguments="x:String">Viewer Permission</InArgument>
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Jit_Attachment_Link">
+          <isactr:FieldArgument.Argument>
+            <OutArgument x:TypeArguments="uiascb4:Attachment_Link_Create" />
+          </isactr:FieldArgument.Argument>
+        </isactr:FieldArgument>
+        <isactr:FieldArgument Name="Visibility" />
+      </isactr:ConnectorActivity.Arguments>
+    </isactr:ConnectorActivity>
+    <usia:SendMessage ActivityInstanceId="e416b727-e71c-473d-bd33-10ab8ce4022d" BindingsVersion="2.1" BusinessEntityName="conversations_chat" ConfiguredBusinessEntity="conversations_chat" ConnectionId="710c9f06-7b77-419c-9f9d-00667c204317" Connector="uipath-salesforce-slack" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send Message to Channel" sap:VirtualizedContainerService.HintSize="410,203" sap2010:WorkflowViewState.IdRef="SendMessage_1">
+      <usia:SendMessage.BusinessEntity>
+        <uibi:BusinessEntity Name="conversations_chat">
+          <uibi:BusinessEntity.AllFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="10">
+              <uiisi:OperationEntityField x:TypeArguments="usic:Conversations_chat" ArgumentDirection="In" ArgumentType="usic:Conversations_chat" DataType="Conversations_chat" Description="The channel message object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="usic:Conversations_chat" ArgumentDirection="Out" ArgumentType="usic:Conversations_chat" DataType="Conversations_chat" Description="The conversations_chat object returned." DisplayName="Response" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsPermanentlyHidden">True</x:Boolean>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Type the name or ID of the public or private channel to which the message must be sent. If channel is not found in the drop-down, you can first scroll the drop-down till the bottom to get all the available channels and then type the channel or retrieve the channel name from Slack application → Right click on that channel → Click on 'Copy' → Click on 'Copy name' → Pass the copied channel name without '#'" DisplayName="Channel" FormDataType="ExpressionTextBox" InArgumentValue="C065GTRF738" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.channel" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">C065GTRF738</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <Literal x:TypeArguments="x:String">C065GTRF738</Literal>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The formatted text of the message to be sent" DisplayName="Message" FormDataType="ExpressionTextBox" InArgumentValue="[string.Format(&quot;Way to go! :tada: A new case in Salesforce was created with your receipt attached for this claim. {0}{1}Click here to check it out: https://jamescdickson-dev-ed.lightning.force.com/lightning/r/Case/{2}/view&quot;, Environment.NewLine, Environment.NewLine, SFCase.Id.ToString)]" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.text" Order="1" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.ArgumentValue>
+                  <InArgument x:TypeArguments="x:String">[string.Format("Way to go! :tada: A new case in Salesforce was created with your receipt attached for this claim. {0}{1}Click here to check it out: https://jamescdickson-dev-ed.lightning.force.com/lightning/r/Case/{2}/view", Environment.NewLine, Environment.NewLine, SFCase.Id.ToString)]</InArgument>
+                </uiisi:OperationEntityField.ArgumentValue>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+                <uiisi:OperationEntityField.Value>
+                  <VisualBasicValue x:TypeArguments="x:String">[string.Format("Way to go! :tada: A new case in Salesforce was created with your receipt attached for this claim. {0}{1}Click here to check it out: https://jamescdickson-dev-ed.lightning.force.com/lightning/r/Case/{2}/view", Environment.NewLine, Environment.NewLine, SFCase.Id.ToString)]</VisualBasicValue>
+                </uiisi:OperationEntityField.Value>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Change how messages are treated. Pass 'none' for removing hyperlinks and pass 'full' to ignore slack's default formatting" DisplayName="Formatting options (parse)" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.parse" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.EnumValues>
+                  <scg:List x:TypeArguments="x:String" Capacity="2">
+                    <x:String>none</x:String>
+                    <x:String>full</x:String>
+                  </scg:List>
+                </uiisi:OperationEntityField.EnumValues>
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" Description="Whether to link and mention all the user groups automatically if the respective names are mentioned in the text message?" DisplayName="Link names" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.link_names" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="s:Nullable(x:Boolean)" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="s:Nullable(x:Boolean)" DataType="Boolean" Description="Whether to display the preview of the links mentioned in the text message?" DisplayName="Unfurl links" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.unfurl_links" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Only supported with 'Bot Token' connection. Customize the bot's user name while sending messages. The bot name will be defaulted to 'UiPath' if nothing is passed" DisplayName="Bot name" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.username" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID7" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Only supported with 'Bot Token' connection. Customize the bot’s icon with an emoji available in the workspace. For example, ':chart_with_upwards_trend'. If we provide an emoji that is not available in the workspace, it will be ignored" DisplayName="Bot icon" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="body.icon_emoji" Order="3" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID8" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="The ID (timestamp) of the message sent" DisplayName="Message timestamp" FormDataType="ExpressionTextBox" IsChildEntityField="True" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Undefined" Name="Response.ts" ShouldFilterOnChange="False">
+                <uiisi:OperationEntityField.Metadata>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <uiisi:CustomFieldsPriority x:Key="CustomFieldsPriority">Default</uiisi:CustomFieldsPriority>
+                  </scg:Dictionary>
+                </uiisi:OperationEntityField.Metadata>
+              </uiisi:OperationEntityField>
+            </scg:List>
+          </uibi:BusinessEntity.AllFields>
+          <uibi:BusinessEntity.EntityMetadata>
+            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat" />
+          </uibi:BusinessEntity.EntityMetadata>
+          <uibi:BusinessEntity.Metadata>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+              <x:String x:Key="Object">conversations_chat</x:String>
+              <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
+              <x:String x:Key="Operation">CreateConversations_chat</x:String>
+              <x:String x:Key="Path">/conversations_chat</x:String>
+            </scg:Dictionary>
+          </uibi:BusinessEntity.Metadata>
+          <uibi:BusinessEntity.SelectedFields>
+            <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+              <x:Reference>__ReferenceID1</x:Reference>
+              <x:Reference>__ReferenceID2</x:Reference>
+              <x:Reference>__ReferenceID3</x:Reference>
+              <x:Reference>__ReferenceID4</x:Reference>
+              <x:Reference>__ReferenceID5</x:Reference>
+              <x:Reference>__ReferenceID6</x:Reference>
+              <x:Reference>__ReferenceID7</x:Reference>
+              <x:Reference>__ReferenceID8</x:Reference>
+            </scg:List>
+          </uibi:BusinessEntity.SelectedFields>
+          <uibi:BusinessEntity.TelemetryProperties>
+            <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+          </uibi:BusinessEntity.TelemetryProperties>
+        </uibi:BusinessEntity>
+      </usia:SendMessage.BusinessEntity>
+      <usia:SendMessage.CachedLookupValues>
+        <scg:Dictionary x:TypeArguments="x:String, scg:List(uiisi:LookupValue)">
+          <scg:List x:TypeArguments="uiisi:LookupValue" x:Key="body_channel" Capacity="1">
+            <uiisi:LookupValue StringFormatDisplayColumns="{x:Null}" Id="C065GTRF738">
+              <uiisi:LookupValue.DisplayColumns>
+                <scg:List x:TypeArguments="x:String" Capacity="4">
+                  <x:String>uipath-demos</x:String>
+                  <x:String>C065GTRF738</x:String>
+                </scg:List>
+              </uiisi:LookupValue.DisplayColumns>
+            </uiisi:LookupValue>
+          </scg:List>
+        </scg:Dictionary>
+      </usia:SendMessage.CachedLookupValues>
+      <usia:SendMessage.DesignConnectionRequest>
+        <uiisi:ConnectionParameters AuthType="ElementInstance" ConnectionId="710c9f06-7b77-419c-9f9d-00667c204317" ConnectionName="Salient Automation Org" ConnectorKey="uipath-salesforce-slack">
+          <uiisi:ConnectionParameters.TelemetryInfo>
+            <uiisi:TelemetryInfo ActivityPack="UiPath.Slack.IntegrationService.Activities" ActivityPackVersion="5.2.0" Source="StudioDesktop" />
+          </uiisi:ConnectionParameters.TelemetryInfo>
+        </uiisi:ConnectionParameters>
+      </usia:SendMessage.DesignConnectionRequest>
+      <usia:SendMessage.SelectedFields>
+        <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
+          <x:Reference>__ReferenceID1</x:Reference>
+          <x:Reference>__ReferenceID2</x:Reference>
+          <x:Reference>__ReferenceID3</x:Reference>
+          <x:Reference>__ReferenceID4</x:Reference>
+          <x:Reference>__ReferenceID5</x:Reference>
+          <x:Reference>__ReferenceID6</x:Reference>
+          <x:Reference>__ReferenceID7</x:Reference>
+          <x:Reference>__ReferenceID8</x:Reference>
+        </scg:List>
+      </usia:SendMessage.SelectedFields>
+      <usia:SendMessage.TelemetryProperties>
+        <scg:Dictionary x:TypeArguments="uibi:TelemetryGroup, scg:IDictionary(x:String, x:String)" />
+      </usia:SendMessage.TelemetryProperties>
+    </usia:SendMessage>
+  </Sequence>
+</Activity>

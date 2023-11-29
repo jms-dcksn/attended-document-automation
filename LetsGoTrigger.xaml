@@ -185,12 +185,24 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LoadTaxonomyDigitizeAndClassify.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="710,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="LoadTaxonomyDigitizeAndClassify.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="p:DocumentTaxonomy" x:Key="Taxonomy">[Taxonomy]</InOutArgument>
-        <InOutArgument x:TypeArguments="p1:Document" x:Key="DocumentObjectModel">[DocumentObjectModel]</InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="FilePath">[FilePath]</InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="DocumentText">[DocumentText]</InOutArgument>
-        <OutArgument x:TypeArguments="p2:ClassificationResult[]" x:Key="ClassificationResult">[ClassificationResults]</OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DUApiKey">[DUApiKey]</InArgument>
+        <InOutArgument x:TypeArguments="p:DocumentTaxonomy" x:Key="Taxonomy">
+          <VisualBasicReference x:TypeArguments="p:DocumentTaxonomy" ExpressionText="Taxonomy" />
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="p1:Document" x:Key="DocumentObjectModel">
+          <VisualBasicReference x:TypeArguments="p1:Document" ExpressionText="DocumentObjectModel" />
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="FilePath">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
+        </InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="DocumentText">
+          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="DocumentText" />
+        </InOutArgument>
+        <OutArgument x:TypeArguments="p2:ClassificationResult[]" x:Key="ClassificationResult">
+          <VisualBasicReference x:TypeArguments="p2:ClassificationResult[]" ExpressionText="ClassificationResults" />
+        </OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DUApiKey">
+          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DUApiKey" />
+        </InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_StagingApiKey" />
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>

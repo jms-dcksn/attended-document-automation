@@ -272,6 +272,13 @@
                             "key": "name",
                             "type": "textfield",
                             "input": true
+                          },
+                          {
+                            "label": "Date",
+                            "tableView": true,
+                            "key": "date",
+                            "type": "textfield",
+                            "input": true
                           }
                         ]
                       },
@@ -375,6 +382,16 @@
         "input": false,
         "tableView": false,
         "label": "Columns"
+      },
+      {
+        "label": "Clean Output Folder",
+        "action": "event",
+        "showValidations": false,
+        "theme": "secondary",
+        "tableView": false,
+        "key": "cleanOutputFolder",
+        "type": "button",
+        "input": true
       },
       {
         "label": "Close",

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1254,4576</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>940,4576</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LetsGoTrigger_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -64,6 +64,14 @@
       <x:String>UiPath.OCR.Contracts.Activities</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Activities.System.Collections</x:String>
+      <x:String>UiPath.IntegrationService.Activities.ViewModels</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Factories</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Exceptions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Exceptions</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Helpers</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -141,6 +149,8 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="LetsGoTrigger" sap:VirtualizedContainerService.HintSize="772,4511" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -185,24 +195,12 @@
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="LoadTaxonomyDigitizeAndClassify.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="710,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="LoadTaxonomyDigitizeAndClassify.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InOutArgument x:TypeArguments="p:DocumentTaxonomy" x:Key="Taxonomy">
-          <VisualBasicReference x:TypeArguments="p:DocumentTaxonomy" ExpressionText="Taxonomy" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="p1:Document" x:Key="DocumentObjectModel">
-          <VisualBasicReference x:TypeArguments="p1:Document" ExpressionText="DocumentObjectModel" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="FilePath">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="FilePath" />
-        </InOutArgument>
-        <InOutArgument x:TypeArguments="x:String" x:Key="DocumentText">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="DocumentText" />
-        </InOutArgument>
-        <OutArgument x:TypeArguments="p2:ClassificationResult[]" x:Key="ClassificationResult">
-          <VisualBasicReference x:TypeArguments="p2:ClassificationResult[]" ExpressionText="ClassificationResults" />
-        </OutArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="in_DUApiKey">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="DUApiKey" />
-        </InArgument>
+        <InOutArgument x:TypeArguments="p:DocumentTaxonomy" x:Key="Taxonomy">[Taxonomy]</InOutArgument>
+        <InOutArgument x:TypeArguments="p1:Document" x:Key="DocumentObjectModel">[DocumentObjectModel]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="FilePath">[FilePath]</InOutArgument>
+        <InOutArgument x:TypeArguments="x:String" x:Key="DocumentText">[DocumentText]</InOutArgument>
+        <OutArgument x:TypeArguments="p2:ClassificationResult[]" x:Key="ClassificationResult">[ClassificationResults]</OutArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="in_DUApiKey">[DUApiKey]</InArgument>
         <InArgument x:TypeArguments="x:String" x:Key="in_StagingApiKey" />
       </ui:InvokeWorkflowFile.Arguments>
       <sap:WorkflowViewStateService.ViewState>
@@ -407,20 +405,13 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p3:DataExtractionScope>
+            <p6:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DocumentObjectModel]" DocumentPath="[FilePath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="634,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[ValidatedExtraction]" />
             <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="0facf109-1585-4f95-ad06-2d309cea00c9" sap:VirtualizedContainerService.HintSize="634,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_2">
               <ufa:SetFormFieldsActivity.Arguments>
                 <InArgument x:TypeArguments="x:Boolean" x:Key="classification">True</InArgument>
                 <InArgument x:TypeArguments="x:Boolean" x:Key="extraction">True</InArgument>
               </ufa:SetFormFieldsActivity.Arguments>
             </ufa:SetFormFieldsActivity>
-            <p6:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DocumentObjectModel]" DocumentPath="[FIlePath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="634,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="True" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[ValidatedExtraction]">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </p6:PresentValidationStation>
             <p3:ExportExtractionResults DataSet="[DataSet]" DisplayName="Export Extraction Results" ExtractionResult="[ValidatedExtraction]" sap:VirtualizedContainerService.HintSize="634,174" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_1" IncludeConfidence="False" IncludeOCRConfidence="False" />
             <Assign sap:VirtualizedContainerService.HintSize="634,82" sap2010:WorkflowViewState.IdRef="Assign_4">
               <Assign.To>

@@ -236,6 +236,16 @@
                                 },
                                 "type": "button",
                                 "input": true
+                              },
+                              {
+                                "label": "Send Me Output File",
+                                "action": "event",
+                                "showValidations": false,
+                                "size": "sm",
+                                "tableView": false,
+                                "key": "sendMeOutputFile",
+                                "type": "button",
+                                "input": true
                               }
                             ],
                             "width": 6,

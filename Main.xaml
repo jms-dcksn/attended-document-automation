@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1322,1323" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1375,678" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:p1="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p2="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ufa="clr-namespace:UiPath.Forms.Activities;assembly=UiPath.Forms.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -68,6 +68,81 @@
       <x:String>UiPath.Platform.GlobalVariables</x:String>
       <x:String>UiPath.Forms.Activities.Base</x:String>
       <x:String>UiPath.Platform.Triggers</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.TemplateManager</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.TemplateManager.VSIntegration.Models</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.TemplateManager.Views</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.TemplateManager.Services</x:String>
+      <x:String>UiPath.SmartData.PositionBasedExtraction.TemplateManager.Properties</x:String>
+      <x:String>UiPath.Orchestrator.Client</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>UiPath.DocumentUnderstanding.Persistence</x:String>
+      <x:String>UiPath.DocumentUnderstanding.Persistence.Properties</x:String>
+      <x:String>UiPath.DocumentUnderstanding.Persistence.Extensions</x:String>
+      <x:String>UiPath.Core.Activities.Design</x:String>
+      <x:String>UiPath.Activities.Presentation</x:String>
+      <x:String>UiPath.Activities.Presentation.Converters</x:String>
+      <x:String>UiPath.Shared.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Utils</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Services</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Services.Interfaces</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Extensions</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Controls</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Controls.PropertyEditors</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Controls.Models</x:String>
+      <x:String>UiPath.Shared.Activities.Design.AttachedProperties</x:String>
+      <x:String>UiPath.Shared.Activities.Design.Editors</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.ValidationStation</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.Utils.Resources</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.Training</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.TaxonomyManagement</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.StudioWizards</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.StudioWizards.TaxonomyManager</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.Properties</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentExtraction.ConfigureRegexes</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentExtraction.ConfigureRegexes.Builder.ViewModels</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentExtraction.ConfigureRegexes.Builder.Templates</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentExtraction.ConfigureExtractors</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.DocumentClassification</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.Digitization</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Design.Actions</x:String>
+      <x:String>UiPath.DU.Integration</x:String>
+      <x:String>UiPath.DU.Integration.Projects</x:String>
+      <x:String>UiPath.DU.Integration.Extensions</x:String>
+      <x:String>UiPath.DU.Integration.Orchestrator</x:String>
+      <x:String>UiPath.DU.Integration.MlSkills</x:String>
+      <x:String>UiPath.DU.Integration.Datasets</x:String>
+      <x:String>UiPath.DU.Integration.AiFabric</x:String>
+      <x:String>UiPath.DU.AiFabricClient</x:String>
+      <x:String>UiPath.DU.AiFabricClient.Model</x:String>
+      <x:String>UiPath.Shared.Activities.Services</x:String>
+      <x:String>UiPath.Shared.Activities.Services.Interfaces</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities.Bindings</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Shared.Activities.Triggers</x:String>
+      <x:String>UiPath.SmartData.Telemetry.Events.Digitize</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Properties</x:String>
+      <x:String>UiPath.IntelligentOCR.Activities.Internal</x:String>
+      <x:String>System.Threading.Tasks</x:String>
+      <x:String>UiPath.DU.Shared.DiscoveryClient</x:String>
+      <x:String>UiPath.Shared</x:String>
+      <x:String>UiPath.Shared.Text</x:String>
+      <x:String>UiPath.Shared.Attributes</x:String>
+      <x:String>UiPath.IntelligentOCR.Properties</x:String>
+      <x:String>UiPath.IntelligentOCR.Logging</x:String>
+      <x:String>UiPath.IntelligentOCR.Exceptions</x:String>
+      <x:String>UiPath.IntelligentOCR.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.Utils</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions.Utils</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions.Models</x:String>
+      <x:String>UiPath.IntelligentOCR.Actions.Abstractions</x:String>
+      <x:String>UiPath.SmartData.Telemetry</x:String>
+      <x:String>UiPath.SmartData.Telemetry.Shared</x:String>
+      <x:String>UiPath.SmartData.Telemetry.Events</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -144,16 +219,29 @@
       <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
       <AssemblyReference>UiPath.Studio.Forms.Runtime</AssemblyReference>
       <AssemblyReference>UiPath.Forms.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.PositionBasedExtraction.TemplateManager</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.Persistence</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomation.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>System.Threading.Tasks.Parallel</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.ML.Telemetry</AssemblyReference>
+      <AssemblyReference>UiPath.SmartData.Telemetry</AssemblyReference>
+      <AssemblyReference>UiPath.PDF.Telemetry</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="450,613" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="p:DocumentTaxonomy" Name="Taxonomy" />
-      <Variable x:TypeArguments="x:String" Name="FilePath">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:String">Documents\\Invoices\\Invoice-Coffee.pdf</Literal>
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:String" Default="Documents\\Invoices\\Invoice-Coffee.pdf" Name="FilePath" />
       <Variable x:TypeArguments="x:String" Name="DocumentText" />
       <Variable x:TypeArguments="p1:Document" Name="DocumentObjectModel" />
       <Variable x:TypeArguments="p2:ExtractionResult" Name="ExtractionResults" />

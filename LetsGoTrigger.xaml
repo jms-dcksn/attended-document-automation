@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>940,4576</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>2522,4576</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>LetsGoTrigger_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -405,7 +405,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p3:DataExtractionScope>
-            <p6:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DocumentObjectModel]" DocumentPath="[FilePath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="634,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="False" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[ValidatedExtraction]" />
+            <p6:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[ExtractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DocumentObjectModel]" DocumentPath="[FilePath]" DocumentText="[DocumentText]" sap:VirtualizedContainerService.HintSize="634,366" sap2010:WorkflowViewState.IdRef="PresentValidationStation_1" ShowOnlyRelevantPageRange="True" Taxonomy="[Taxonomy]" ValidatedExtractionResults="[ValidatedExtraction]" />
             <ufa:SetFormFieldsActivity InstanceName="{x:Null}" DisplayName="Set Form Values" FormId="0facf109-1585-4f95-ad06-2d309cea00c9" sap:VirtualizedContainerService.HintSize="634,140" sap2010:WorkflowViewState.IdRef="SetFormFieldsActivity_2">
               <ufa:SetFormFieldsActivity.Arguments>
                 <InArgument x:TypeArguments="x:Boolean" x:Key="classification">True</InArgument>

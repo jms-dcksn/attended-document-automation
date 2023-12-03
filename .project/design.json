@@ -1,5 +1,9 @@
 {
-  "Tags": [],
+  "Tags": [
+    {
+      "Key": "Document Understanding"
+    }
+  ],
   "SeparateRuntimeDependencies": true,
   "IncludeSources": true
 }

@@ -10,6 +10,7 @@
     "UiPath.Form.Activities": "[23.10.4]",
     "UiPath.IntelligentOCR.Activities": "[6.14.1]",
     "UiPath.PDF.Activities": "[3.16.0]",
+    "UiPath.Salesforce.IntegrationService.Activities": "[6.1.0]",
     "UiPath.Slack.IntegrationService.Activities": "[5.2.0-preview]",
     "UiPath.System.Activities": "[23.10.2]",
     "UiPath.Testing.Activities": "[23.10.0]",

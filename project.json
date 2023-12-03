@@ -1,4 +1,4 @@
-{
+﻿{
   "name": "Attended Document Automation",
   "projectId": "282b39d8-4d10-48c0-968e-bbd32efb32a1",
   "description": "Event-based trigger for inbound emails to capture attached receipts and invoices, process accordingly",

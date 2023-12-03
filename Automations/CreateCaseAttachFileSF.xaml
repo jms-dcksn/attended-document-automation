@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="CreateCaseAttachFileSF" this:CreateCaseAttachFileSF.in_AccountName="Lazy Panda" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:usia1="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usiascb="clr-namespace:UiPath.Salesforce.IntegrationService.Activities.SWEntities.C0f4619f9f9fd416a96f64aeb838e7ee7_Account.Bundle;assembly=C0f4619f9f9fd416a96f.x4lYn3GtVPS1fc3rDj7WSQ2" xmlns:usic="clr-namespace:UiPath.Salesforce.IntegrationService.Client;assembly=UiPath.Salesforce.IntegrationService" xmlns:usic1="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="CreateCaseAttachFileSF" this:CreateCaseAttachFileSF.in_AccountName="Lazy Panda" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:uibi="http://schemas.uipath.com/workflow/infrastructure/baf/uibi" xmlns:uiisi="http://schemas.uipath.com/workflow/infrastructure/is/uiisi" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usia="clr-namespace:UiPath.Salesforce.IntegrationService.Activities;assembly=UiPath.Salesforce.IntegrationService.Activities" xmlns:usia1="clr-namespace:UiPath.Slack.IntegrationService.Activities;assembly=UiPath.Slack.IntegrationService.Activities" xmlns:usiascb="clr-namespace:UiPath.Salesforce.IntegrationService.Activities.SWEntities.C0f4619f9f9fd416a96f64aeb838e7ee7_Account.Bundle;assembly=C0f4619f9f9fd416a96f.MSWZ63JtV3J1O5PLg5AZT62" xmlns:usic="clr-namespace:UiPath.Salesforce.IntegrationService.Client;assembly=UiPath.Salesforce.IntegrationService" xmlns:usic1="clr-namespace:UiPath.Slack.IntegrationService.Client;assembly=UiPath.Slack.IntegrationService" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_AccountName" Type="InArgument(x:String)" />
     <x:Property Name="in_FilePath" Type="InArgument(x:String)" />
@@ -53,6 +53,7 @@
       <x:String>UiPath.Salesforce.IntegrationService.Activities.SWEntities.C0f4619f9f9fd416a96f64aeb838e7ee7_Account.Bundle</x:String>
       <x:String>UiPath.Platform.ResourceHandling</x:String>
       <x:String>UiPath.Slack.IntegrationService.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -99,23 +100,29 @@
       <AssemblyReference>System.ComponentModel</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>C0f4619f9f9fd416a96f.MSWZ63JtV3J1O5PLg5AZT62</AssemblyReference>
+      <AssemblyReference>C0f4619f9f9fd416a96f.MSWZ63JtV3J1O5PLg5AZT62</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
   <Sequence DisplayName="CreateCaseAttachFileSF" sap:VirtualizedContainerService.HintSize="472,2291" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
-      <Variable x:TypeArguments="usiascb:Account" Name="SFAccount" />
-      <Variable x:TypeArguments="usiascb:Account[]" Name="SFAccountList" />
       <Variable x:TypeArguments="x:String" Name="SFCaseId" />
       <Variable x:TypeArguments="x:String" Name="SFFileId" />
+      <Variable x:TypeArguments="usiascb:Account[]" Name="SFAccountList" />
+      <Variable x:TypeArguments="usiascb:Account" Name="SFAccount" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <usia:SearchUsingSOQL ActivityInstanceId="f0ffc7b0-f643-4ee3-88a6-6e6542d2f276" BindingsVersion="2.1" BusinessEntityName="Account" ConfiguredBusinessEntity="" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="410,256" sap2010:WorkflowViewState.IdRef="SearchUsingSOQL_1" UseRawCEQL="False">
+    <usia:SearchUsingSOQL Language="{x:Null}" ActivityInstanceId="fc9f1cbe-8593-4be1-afbd-c7eb183d33b2" BindingsVersion="2.1" BusinessEntityName="Account" ConfiguredBusinessEntity="" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Search" DesignConnectionEnabled="True" DisplayName="Search Records" sap:VirtualizedContainerService.HintSize="410,256" sap2010:WorkflowViewState.IdRef="SearchUsingSOQL_1" UseRawCEQL="False">
       <usia:SearchUsingSOQL.BusinessEntity>
-        <uibi:BusinessEntity Name="Account">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID0}" Name="Account">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="13">
               <uiisi:OperationEntityField x:TypeArguments="x:Int32" x:Name="__ReferenceID1" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The maximum number of records to return." DisplayName="Max records" FormDataType="ExpressionTextBox" InArgumentValue="1" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="maximumRecordsReturned" ShouldFilterOnChange="False">
@@ -126,14 +133,7 @@
                   <Literal x:TypeArguments="x:Int32">1</Literal>
                 </uiisi:OperationEntityField.Value>
               </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Specify if deleted objects should be included in the search." DisplayName="Include deleted" FormDataType="ExpressionTextBox" InArgumentValue="False" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="includeDeleted" ShouldFilterOnChange="False">
-                <uiisi:OperationEntityField.ArgumentValue>
-                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
-                </uiisi:OperationEntityField.ArgumentValue>
-                <uiisi:OperationEntityField.Value>
-                  <Literal x:TypeArguments="x:Boolean">False</Literal>
-                </uiisi:OperationEntityField.Value>
-              </uiisi:OperationEntityField>
+              <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID2" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Specify if deleted objects should be included in the search." DisplayName="Include deleted" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="includeDeleted" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="x:Boolean" x:Name="__ReferenceID3" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Sort nulls last." DisplayName="Nulls last" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="nullsLast" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID4" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The field(s) to order by. For example to order by Id ascending use 'Id asc'. A unique value (such as ID) must be provided to support pagination above 1000 records" DisplayName="Order by" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="orderBy" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="x:Int32" x:Name="__ReferenceID5" ArgumentDirection="In" ArgumentType="x:Int32" DataType="Int32" Description="The page size for pagination, which defaults to 200 if not supplied" DisplayName="Page size" FormDataType="ExpressionTextBox" InArgumentValue="50" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="pageSize" ShouldFilterOnChange="False">
@@ -141,9 +141,9 @@
                   <InArgument x:TypeArguments="x:Int32">50</InArgument>
                 </uiisi:OperationEntityField.ArgumentValue>
               </uiisi:OperationEntityField>
-              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The token for the next page of records. Use this token to iterate through the pages until a empty list is returned." DisplayName="Next Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="nextPage" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The page token taken from the next page token of the previous page." DisplayName="Page Token" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="nextPage" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="x:Boolean" ArgumentDirection="In" ArgumentType="x:Boolean" DataType="Boolean" Description="Specify if you wish to return the total count. If the end point does not support this natively, two operations will be performed in order to return the count. Also this will be done only when you are requesting the first page of a large result set" DisplayName="Return total count" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="returnTotalCount" ShouldFilterOnChange="False" />
-              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="Where" DisplayName="Where" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="where" ShouldFilterOnChange="False" />
+              <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID6" ArgumentDirection="In" ArgumentType="x:String" DataType="String" Description="The CEQL search expression, or the where clause, without the WHERE keyword, in a typical SQL query. For example, to search for objects that were last modified on or after 'Jan 15, 2014', the search expression will be &lt;i&gt;where=LastModifiedDate&gt;='2014-01-15T00:00:00.000Z'&lt;/i&gt;. When this parameter is omitted, all objects of the given type are returned in a paginated fashion." DisplayName="Where" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="False" IsIdField="False" IsMandatory="False" IsParameter="True" IsPriority="False" IsSelected="False" Location="Query" Name="where" ShouldFilterOnChange="False" />
               <uiisi:OperationEntityField x:TypeArguments="usiascb:Account" x:Name="__ReferenceID7" ArgumentDirection="Out" ArgumentType="usiascb:Account" DataType="Account" Description="The first record returned." DisplayName="First Account Record" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="firstResultAsEntity" OutArgumentValue="[SFAccount]" ShouldFilterOnChange="False">
                 <uiisi:OperationEntityField.ArgumentValue>
                   <OutArgument x:TypeArguments="usiascb:Account">[SFAccount]</OutArgument>
@@ -165,16 +165,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID0}" DisplayName="Account" EligibleOperations="64" IsCustomEntity="False" Name="Account" />
+            <uibi:EntityMetadata DisplayName="Account" EligibleOperations="64" IsCustomEntity="False" Name="Account">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
+                  <x:String x:Key="Object">Account</x:String>
+                  <x:String x:Key="FullPath">/Account</x:String>
+                  <x:String x:Key="Method">GET</x:String>
+                  <x:Null x:Key="BaseObject" />
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID0">
-              <x:String x:Key="Object">Account</x:String>
-              <x:String x:Key="FullPath">/Account</x:String>
-              <x:String x:Key="Method">GET</x:String>
-              <x:Null x:Key="BaseObject" />
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SearchableFields>
             <scg:List x:TypeArguments="uibi:SearchableField" Capacity="66">
               <uibi:SearchableField Mask="{x:Null}" DisplayName="Account Number" InputType="x:String" Name="AccountNumber" QueryType="x:String">
@@ -802,7 +803,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <usia:InsertRecord ActivityInstanceId="155c10ca-62d9-44e9-b5f0-afc812573d39" BindingsVersion="2.1" BusinessEntityName="Case" ConfiguredBusinessEntity="" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Create Case in Salesforce" sap:VirtualizedContainerService.HintSize="334,185" sap2010:WorkflowViewState.IdRef="InsertRecord_1">
             <usia:InsertRecord.BusinessEntity>
-              <uibi:BusinessEntity Name="Case">
+              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID10}" Name="Case">
                 <uibi:BusinessEntity.AllFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="41">
                     <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID11" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="Case ID" DisplayName="Case ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Id" OutArgumentValue="[SFCaseId]" ShouldFilterOnChange="False">
@@ -952,16 +953,17 @@
                   </scg:List>
                 </uibi:BusinessEntity.AllFields>
                 <uibi:BusinessEntity.EntityMetadata>
-                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID10}" x:Name="__ReferenceID30" DisplayName="Case" EligibleOperations="1" IsCustomEntity="False" Name="Case" />
+                  <uibi:EntityMetadata x:Name="__ReferenceID30" DisplayName="Case" EligibleOperations="1" IsCustomEntity="False" Name="Case">
+                    <uibi:EntityMetadata.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
+                        <x:String x:Key="Object">Case</x:String>
+                        <x:String x:Key="FullPath">/Case</x:String>
+                        <x:String x:Key="Method">POST</x:String>
+                        <x:Null x:Key="BaseObject" />
+                      </scg:Dictionary>
+                    </uibi:EntityMetadata.Metadata>
+                  </uibi:EntityMetadata>
                 </uibi:BusinessEntity.EntityMetadata>
-                <uibi:BusinessEntity.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID10">
-                    <x:String x:Key="Object">Case</x:String>
-                    <x:String x:Key="FullPath">/Case</x:String>
-                    <x:String x:Key="Method">POST</x:String>
-                    <x:Null x:Key="BaseObject" />
-                  </scg:Dictionary>
-                </uibi:BusinessEntity.Metadata>
                 <uibi:BusinessEntity.SelectedFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
                     <x:Reference>__ReferenceID11</x:Reference>
@@ -1011,7 +1013,7 @@
           </sap:WorkflowViewStateService.ViewState>
           <usia:CreateAccount ActivityInstanceId="3dc5d503-9349-4f19-91fc-bb374178eb5c" BindingsVersion="2.1" BusinessEntityName="Account" ConfiguredBusinessEntity="curated_account" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Create Account" sap:VirtualizedContainerService.HintSize="334,387" sap2010:WorkflowViewState.IdRef="CreateAccount_1">
             <usia:CreateAccount.BusinessEntity>
-              <uibi:BusinessEntity Name="curated_account">
+              <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID15}" Name="curated_account">
                 <uibi:BusinessEntity.AllFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="52">
                     <uiisi:OperationEntityField x:TypeArguments="x:String" x:Name="__ReferenceID16" ArgumentDirection="Out" ArgumentType="x:String" DataType="String" Description="ID of the account that gets created in Salesforce" DisplayName="ID" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="True" IsMandatory="False" IsPriority="False" IsSelected="False" Location="Body" Name="Id" OutArgumentValue="[SFAccountID]" ShouldFilterOnChange="False">
@@ -1268,16 +1270,17 @@
                   </scg:List>
                 </uibi:BusinessEntity.AllFields>
                 <uibi:BusinessEntity.EntityMetadata>
-                  <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID15}" DisplayName="Account" EligibleOperations="1" IsCustomEntity="False" Name="curated_account" />
+                  <uibi:EntityMetadata DisplayName="Account" EligibleOperations="1" IsCustomEntity="False" Name="curated_account">
+                    <uibi:EntityMetadata.Metadata>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID15">
+                        <x:String x:Key="Object">curated_account</x:String>
+                        <x:String x:Key="FullPath">/curated_account</x:String>
+                        <x:String x:Key="Method">POST</x:String>
+                        <x:String x:Key="BaseObject">account</x:String>
+                      </scg:Dictionary>
+                    </uibi:EntityMetadata.Metadata>
+                  </uibi:EntityMetadata>
                 </uibi:BusinessEntity.EntityMetadata>
-                <uibi:BusinessEntity.Metadata>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID15">
-                    <x:String x:Key="Object">curated_account</x:String>
-                    <x:String x:Key="FullPath">/curated_account</x:String>
-                    <x:String x:Key="Method">POST</x:String>
-                    <x:String x:Key="BaseObject">account</x:String>
-                  </scg:Dictionary>
-                </uibi:BusinessEntity.Metadata>
                 <uibi:BusinessEntity.SelectedFields>
                   <scg:List x:TypeArguments="uibi:EntityField" Capacity="16">
                     <x:Reference>__ReferenceID16</x:Reference>
@@ -1524,7 +1527,7 @@
     </If>
     <usia:UploadAttachment FilePath="{x:Null}" ActivityInstanceId="d022931f-15cc-45fc-a0e4-d2b0d0785e0c" BindingsVersion="2.1" BusinessEntityName="Upload a file" ConfiguredBusinessEntity="curated_upload_attachments" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Upload File" sap:VirtualizedContainerService.HintSize="410,152" sap2010:WorkflowViewState.IdRef="UploadAttachment_1">
       <usia:UploadAttachment.BusinessEntity>
-        <uibi:BusinessEntity Name="curated_upload_attachments">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID35}" Name="curated_upload_attachments">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="6">
               <uiisi:OperationEntityField x:TypeArguments="upr:IResource" x:Name="__ReferenceID38" ArgumentDirection="In" ArgumentType="upr:IResource" DataType="IResource" Description="attachments to be uploaded" DisplayName="Attachment" FormDataType="ExpressionTextBox" InArgumentValue="[LocalResource.FromPath(in_FilePath)]" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="False" IsHidden="False" IsIdField="False" IsMandatory="True" IsPriority="False" IsSelected="False" Location="Body" Name="FileResource" ShouldFilterOnChange="False">
@@ -1573,16 +1576,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID35}" DisplayName="Upload a file" EligibleOperations="32" IsCustomEntity="False" Name="curated_upload_attachments" />
+            <uibi:EntityMetadata DisplayName="Upload a file" EligibleOperations="32" IsCustomEntity="False" Name="curated_upload_attachments">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID35">
+                  <x:String x:Key="Object">curated_upload_attachments</x:String>
+                  <x:String x:Key="Client">UiPath.Salesforce.IntegrationService.Client.Curated_upload_attachmentsAPIClient</x:String>
+                  <x:String x:Key="Operation">CreateCurated_upload_attachment</x:String>
+                  <x:String x:Key="Path">/curated_upload_attachments</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID35">
-              <x:String x:Key="Object">curated_upload_attachments</x:String>
-              <x:String x:Key="Client">UiPath.Salesforce.IntegrationService.Client.Curated_upload_attachmentsAPIClient</x:String>
-              <x:String x:Key="Operation">CreateCurated_upload_attachment</x:String>
-              <x:String x:Key="Path">/curated_upload_attachments</x:String>
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
               <x:Reference>__ReferenceID36</x:Reference>
@@ -1618,7 +1622,7 @@
     </usia:UploadAttachment>
     <usia:AddFileToRecord ActivityInstanceId="b1b891db-b057-4ae0-a846-d2b97be45890" BindingsVersion="2.1" BusinessEntityName="Add File to Record" ConfiguredBusinessEntity="Attachment_Link" ConnectionId="0f4619f9-f9fd-416a-96f6-4aeb838e7ee7" Connector="uipath-salesforce-sfdc" CrudOperation="Action" DesignConnectionEnabled="True" DisplayName="Add File to Record" sap:VirtualizedContainerService.HintSize="410,254" sap2010:WorkflowViewState.IdRef="AddFileToRecord_1">
       <usia:AddFileToRecord.BusinessEntity>
-        <uibi:BusinessEntity Name="Attachment_Link">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID39}" Name="Attachment_Link">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="6">
               <uiisi:OperationEntityField x:TypeArguments="usic:CreateAttachment_LinkRequest" ArgumentDirection="In" ArgumentType="usic:CreateAttachment_LinkRequest" DataType="CreateAttachment_LinkRequest" Description="the request body to link attachments and object-record." DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
@@ -1686,16 +1690,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID39}" DisplayName="Add File to Record" EligibleOperations="32" IsCustomEntity="False" Name="Attachment_Link" />
+            <uibi:EntityMetadata DisplayName="Add File to Record" EligibleOperations="32" IsCustomEntity="False" Name="Attachment_Link">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID39">
+                  <x:String x:Key="Object">Attachment_Link</x:String>
+                  <x:String x:Key="Client">UiPath.Salesforce.IntegrationService.Client.Attachment_LinkAPIClient</x:String>
+                  <x:String x:Key="Operation">CreateAttachment_Link</x:String>
+                  <x:String x:Key="Path">/Attachment_Link</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID39">
-              <x:String x:Key="Object">Attachment_Link</x:String>
-              <x:String x:Key="Client">UiPath.Salesforce.IntegrationService.Client.Attachment_LinkAPIClient</x:String>
-              <x:String x:Key="Operation">CreateAttachment_Link</x:String>
-              <x:String x:Key="Path">/Attachment_Link</x:String>
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="4">
               <x:Reference>__ReferenceID40</x:Reference>
@@ -1733,7 +1738,7 @@
     </usia:AddFileToRecord>
     <usia1:SendMessage ActivityInstanceId="a707cceb-0e77-4e2f-908e-d601534c952c" BindingsVersion="2.1" BusinessEntityName="conversations_chat" ConfiguredBusinessEntity="conversations_chat" ConnectionId="710c9f06-7b77-419c-9f9d-00667c204317" Connector="uipath-salesforce-slack" CrudOperation="Create" DesignConnectionEnabled="True" DisplayName="Send Message to Channel" sap:VirtualizedContainerService.HintSize="410,203" sap2010:WorkflowViewState.IdRef="SendMessage_1">
       <usia1:SendMessage.BusinessEntity>
-        <uibi:BusinessEntity Name="conversations_chat">
+        <uibi:BusinessEntity Metadata="{x:Reference __ReferenceID44}" Name="conversations_chat">
           <uibi:BusinessEntity.AllFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="10">
               <uiisi:OperationEntityField x:TypeArguments="usic1:Conversations_chat" ArgumentDirection="In" ArgumentType="usic1:Conversations_chat" DataType="Conversations_chat" Description="The channel message object body" DisplayName="Body" FormDataType="ExpressionTextBox" IsChildEntityField="False" IsCustomField="False" IsDefault="False" IsDeletable="True" IsHidden="True" IsIdField="False" IsMandatory="True" IsParameter="True" IsPriority="False" IsSelected="False" Location="Undefined" Name="body" ShouldFilterOnChange="False" />
@@ -1821,16 +1826,17 @@
             </scg:List>
           </uibi:BusinessEntity.AllFields>
           <uibi:BusinessEntity.EntityMetadata>
-            <uibi:EntityMetadata Metadata="{x:Reference __ReferenceID44}" DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat" />
+            <uibi:EntityMetadata DisplayName="conversations_chat" EligibleOperations="1" IsCustomEntity="False" Name="conversations_chat">
+              <uibi:EntityMetadata.Metadata>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID44">
+                  <x:String x:Key="Object">conversations_chat</x:String>
+                  <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
+                  <x:String x:Key="Operation">CreateConversations_chat</x:String>
+                  <x:String x:Key="Path">/conversations_chat</x:String>
+                </scg:Dictionary>
+              </uibi:EntityMetadata.Metadata>
+            </uibi:EntityMetadata>
           </uibi:BusinessEntity.EntityMetadata>
-          <uibi:BusinessEntity.Metadata>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object" x:Name="__ReferenceID44">
-              <x:String x:Key="Object">conversations_chat</x:String>
-              <x:String x:Key="Client">UiPath.Slack.IntegrationService.Client.Conversations_chatAPIClient</x:String>
-              <x:String x:Key="Operation">CreateConversations_chat</x:String>
-              <x:String x:Key="Path">/conversations_chat</x:String>
-            </scg:Dictionary>
-          </uibi:BusinessEntity.Metadata>
           <uibi:BusinessEntity.SelectedFields>
             <scg:List x:TypeArguments="uibi:EntityField" Capacity="8">
               <x:Reference>__ReferenceID45</x:Reference>
